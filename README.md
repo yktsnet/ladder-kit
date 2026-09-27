@@ -45,7 +45,7 @@ cp ladder-kit/docs/{ladder,scoring,hiring,adapt}.md ~/repos/target/docs/
 cp -r ladder-kit/.claude/skills/ladder-score ~/repos/target/.claude/skills/
 ```
 
-skill は判定文を暗記で当てず、各セルの「読むもの」を実際に開いて根拠を引く。出るのは
+skill は判定文を暗記や印象で当てず、各セルの「読むもの」を実際に開いて根拠を引く。出るのは
 5軸の点と次に上げる1軸で、総合点は出さない。**採点結果は既定でファイルに書かない。**
 置き場と実名の扱いは、残すと決めた側が先に決める。
 
