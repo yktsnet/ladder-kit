@@ -50,7 +50,7 @@ L2 の判定文から始め、真なら L3 へ進む。**偽になった手前�
 
 理由が「全体的に」「おおむね」で書けてしまうなら、まだ読んでいない。
 
-B 軸は対象者の PR の粒度と裁可の残り方から読む。
+B 軸は対象者の PR の粒度と承認の残り方から読む。
 
 ```bash
 gh pr view <番号> --json title,body,commits --jq '{title, body, n: (.commits|length)}'
