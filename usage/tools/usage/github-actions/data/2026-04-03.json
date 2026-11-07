@@ -1,0 +1,80 @@
+{
+  "date": "2026-04-03",
+  "unreadable": [],
+  "repos": {
+    "admin-console": [
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 1,
+        "minutes": 2
+      }
+    ],
+    "api-server": [
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 3,
+        "minutes": 10
+      },
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 1,
+        "minutes": 8
+      }
+    ],
+    "data-pipeline": [
+      {
+        "workflow": "nightly",
+        "event": "schedule",
+        "runs": 1,
+        "minutes": 22
+      }
+    ],
+    "design-system": [
+      {
+        "workflow": "Delete merged branch",
+        "event": "pull_request",
+        "runs": 4,
+        "minutes": 4
+      },
+      {
+        "workflow": "gitleaks",
+        "event": "pull_request",
+        "runs": 1,
+        "minutes": 1
+      }
+    ],
+    "docs-site": [
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 2,
+        "minutes": 4
+      }
+    ],
+    "mobile-app": [
+      {
+        "workflow": "Build",
+        "event": "pull_request",
+        "runs": 2,
+        "minutes": 17
+      }
+    ],
+    "web-app": [
+      {
+        "workflow": "CI",
+        "event": "push",
+        "runs": 3,
+        "minutes": 11
+      },
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 2,
+        "minutes": 8
+      }
+    ]
+  }
+}

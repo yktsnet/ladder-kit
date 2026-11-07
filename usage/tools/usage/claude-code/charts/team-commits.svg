@@ -33,26 +33,26 @@ svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --
 <text class="muted" x="56" y="103.0" text-anchor="end">37.5</text>
 <line class="grid" x1="64" y1="24.0" x2="690" y2="24.0"/>
 <text class="muted" x="56" y="28.0" text-anchor="end">50</text>
-<text class="muted" x="64.0" y="346" text-anchor="middle">10/12</text>
-<text class="muted" x="96.9" y="346" text-anchor="middle">13</text>
-<text class="muted" x="129.9" y="346" text-anchor="middle">14</text>
-<text class="muted" x="162.8" y="346" text-anchor="middle">15</text>
-<text class="muted" x="195.8" y="346" text-anchor="middle">16</text>
-<text class="muted" x="228.7" y="346" text-anchor="middle">19</text>
-<text class="muted" x="261.7" y="346" text-anchor="middle">20</text>
-<text class="muted" x="294.6" y="346" text-anchor="middle">21</text>
-<text class="muted" x="327.6" y="346" text-anchor="middle">22</text>
-<text class="muted" x="360.5" y="346" text-anchor="middle">23</text>
-<text class="muted" x="393.5" y="346" text-anchor="middle">26</text>
-<text class="muted" x="426.4" y="346" text-anchor="middle">27</text>
-<text class="muted" x="459.4" y="346" text-anchor="middle">28</text>
-<text class="muted" x="492.3" y="346" text-anchor="middle">29</text>
-<text class="muted" x="525.3" y="346" text-anchor="middle">30</text>
-<text class="muted" x="558.2" y="346" text-anchor="middle">11/2</text>
-<text class="muted" x="591.2" y="346" text-anchor="middle">3</text>
-<text class="muted" x="624.1" y="346" text-anchor="middle">4</text>
-<text class="muted" x="657.1" y="346" text-anchor="middle">5</text>
-<text class="muted" x="690.0" y="346" text-anchor="middle">6</text>
+<text class="muted" x="64.0" y="346" text-anchor="middle">3/30</text>
+<text class="muted" x="96.9" y="346" text-anchor="middle">31</text>
+<text class="muted" x="129.9" y="346" text-anchor="middle">4/1</text>
+<text class="muted" x="162.8" y="346" text-anchor="middle">2</text>
+<text class="muted" x="195.8" y="346" text-anchor="middle">3</text>
+<text class="muted" x="228.7" y="346" text-anchor="middle">6</text>
+<text class="muted" x="261.7" y="346" text-anchor="middle">7</text>
+<text class="muted" x="294.6" y="346" text-anchor="middle">8</text>
+<text class="muted" x="327.6" y="346" text-anchor="middle">9</text>
+<text class="muted" x="360.5" y="346" text-anchor="middle">10</text>
+<text class="muted" x="393.5" y="346" text-anchor="middle">13</text>
+<text class="muted" x="426.4" y="346" text-anchor="middle">14</text>
+<text class="muted" x="459.4" y="346" text-anchor="middle">15</text>
+<text class="muted" x="492.3" y="346" text-anchor="middle">16</text>
+<text class="muted" x="525.3" y="346" text-anchor="middle">17</text>
+<text class="muted" x="558.2" y="346" text-anchor="middle">20</text>
+<text class="muted" x="591.2" y="346" text-anchor="middle">21</text>
+<text class="muted" x="624.1" y="346" text-anchor="middle">22</text>
+<text class="muted" x="657.1" y="346" text-anchor="middle">23</text>
+<text class="muted" x="690.0" y="346" text-anchor="middle">24</text>
 <polyline class="line s0" style="fill: none" points="64.0,276.0 96.9,300.0 129.9,324.0 162.8,324.0 195.8,324.0 228.7,318.0 261.7,306.0 294.6,258.0 327.6,78.0 360.5,240.0 393.5,162.0 426.4,312.0 459.4,180.0 492.3,198.0 525.3,246.0 558.2,252.0 591.2,216.0 624.1,210.0 657.1,84.0 690.0,126.0"/>
 <circle class="dot s0" cx="64.0" cy="276.0" r="4"/>
 <circle class="dot s0" cx="96.9" cy="300.0" r="4"/>

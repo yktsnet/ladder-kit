@@ -33,56 +33,56 @@ svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --
 <text class="muted" x="56" y="103.0" text-anchor="end">150</text>
 <line class="grid" x1="64" y1="24.0" x2="690" y2="24.0"/>
 <text class="muted" x="56" y="28.0" text-anchor="end">200</text>
-<text class="muted" x="64.0" y="346" text-anchor="middle">10/10</text>
-<text class="muted" x="110.4" y="346" text-anchor="middle">12</text>
-<text class="muted" x="272.7" y="346" text-anchor="middle">19</text>
-<text class="muted" x="435.0" y="346" text-anchor="middle">26</text>
-<text class="muted" x="574.1" y="346" text-anchor="middle">11/1</text>
-<text class="muted" x="597.3" y="346" text-anchor="middle">2</text>
+<text class="muted" x="64.0" y="346" text-anchor="middle">3/28</text>
+<text class="muted" x="110.4" y="346" text-anchor="middle">30</text>
+<text class="muted" x="156.7" y="346" text-anchor="middle">4/1</text>
+<text class="muted" x="272.7" y="346" text-anchor="middle">6</text>
+<text class="muted" x="435.0" y="346" text-anchor="middle">13</text>
+<text class="muted" x="597.3" y="346" text-anchor="middle">20</text>
 <line class="limit" x1="64" y1="224.0" x2="690" y2="224.0"/>
 <line class="limit" x1="64" y1="192.8" x2="690" y2="192.8"/>
 <line class="limit" x1="64" y1="161.5" x2="690" y2="161.5"/>
 <line class="limit" x1="64" y1="130.3" x2="690" y2="130.3"/>
-<polyline class="line other " style="fill: none" points="64.0,264.0 87.2,256.5 110.4,57.0 133.6,169.5 156.7,139.5 179.9,148.5 203.1,112.5 226.3,247.5 249.5,243.0 272.7,120.0 295.9,63.0 319.0,114.0 342.2,112.5 365.4,181.5 388.6,264.0 411.8,265.5 435.0,108.0 458.1,63.0 481.3,129.0 504.5,97.5 527.7,138.0 550.9,235.5 574.1,261.0 597.3,133.5 620.4,121.5 643.6,147.0 666.8,106.5 690.0,81.0"/>
-<circle class="dot other" cx="64.0" cy="264.0" r="3"/>
-<circle class="dot other" cx="87.2" cy="256.5" r="3"/>
-<circle class="dot other" cx="110.4" cy="57.0" r="3"/>
-<circle class="dot other" cx="133.6" cy="169.5" r="3"/>
-<circle class="dot other" cx="156.7" cy="139.5" r="3"/>
-<circle class="dot other" cx="179.9" cy="148.5" r="3"/>
-<circle class="dot other" cx="203.1" cy="112.5" r="3"/>
-<circle class="dot other" cx="226.3" cy="247.5" r="3"/>
-<circle class="dot other" cx="249.5" cy="243.0" r="3"/>
-<circle class="dot other" cx="272.7" cy="120.0" r="3"/>
-<circle class="dot other" cx="295.9" cy="63.0" r="3"/>
-<circle class="dot other" cx="319.0" cy="114.0" r="3"/>
-<circle class="dot other" cx="342.2" cy="112.5" r="3"/>
-<circle class="dot other" cx="365.4" cy="181.5" r="3"/>
-<circle class="dot other" cx="388.6" cy="264.0" r="3"/>
-<circle class="dot other" cx="411.8" cy="265.5" r="3"/>
-<circle class="dot other" cx="435.0" cy="108.0" r="3"/>
-<circle class="dot other" cx="458.1" cy="63.0" r="3"/>
-<circle class="dot other" cx="481.3" cy="129.0" r="3"/>
-<circle class="dot other" cx="504.5" cy="97.5" r="3"/>
-<circle class="dot other" cx="527.7" cy="138.0" r="3"/>
-<circle class="dot other" cx="550.9" cy="235.5" r="3"/>
-<circle class="dot other" cx="574.1" cy="261.0" r="3"/>
-<circle class="dot other" cx="597.3" cy="133.5" r="3"/>
-<circle class="dot other" cx="620.4" cy="121.5" r="3"/>
-<circle class="dot other" cx="643.6" cy="147.0" r="3"/>
-<circle class="dot other" cx="666.8" cy="106.5" r="3"/>
-<circle class="dot other" cx="690.0" cy="81.0" r="3"/>
-<polyline class="line s0 " style="fill: none" points="64.0,264.0 87.2,260.2 110.4,192.5 133.6,186.8 156.7,177.3 179.9,172.5 203.1,163.9 226.3,161.6 249.5,159.6 272.7,168.6 295.9,153.4 319.0,149.8 342.2,144.6 365.4,154.5 388.6,156.9 411.8,160.1 435.0,158.4 458.1,158.4 481.3,160.5 504.5,158.4 527.7,152.1 550.9,148.1 574.1,147.4 597.3,151.1 620.4,159.4 643.6,162.0 666.8,163.3 690.0,155.1"/>
+<polyline class="line other " style="fill: none" points="64.0,256.5 87.2,270.0 110.4,126.0 133.6,118.5 156.7,145.5 179.9,162.0 203.1,193.5 226.3,253.5 249.5,264.0 272.7,78.0 295.9,174.0 319.0,133.5 342.2,121.5 365.4,60.0 388.6,268.5 411.8,252.0 435.0,121.5 458.1,153.0 481.3,138.0 504.5,63.0 527.7,114.0 550.9,255.0 574.1,250.5 597.3,84.0 620.4,184.5 643.6,205.5 666.8,174.0 690.0,124.5"/>
+<circle class="dot other" cx="64.0" cy="256.5" r="3"/>
+<circle class="dot other" cx="87.2" cy="270.0" r="3"/>
+<circle class="dot other" cx="110.4" cy="126.0" r="3"/>
+<circle class="dot other" cx="133.6" cy="118.5" r="3"/>
+<circle class="dot other" cx="156.7" cy="145.5" r="3"/>
+<circle class="dot other" cx="179.9" cy="162.0" r="3"/>
+<circle class="dot other" cx="203.1" cy="193.5" r="3"/>
+<circle class="dot other" cx="226.3" cy="253.5" r="3"/>
+<circle class="dot other" cx="249.5" cy="264.0" r="3"/>
+<circle class="dot other" cx="272.7" cy="78.0" r="3"/>
+<circle class="dot other" cx="295.9" cy="174.0" r="3"/>
+<circle class="dot other" cx="319.0" cy="133.5" r="3"/>
+<circle class="dot other" cx="342.2" cy="121.5" r="3"/>
+<circle class="dot other" cx="365.4" cy="60.0" r="3"/>
+<circle class="dot other" cx="388.6" cy="268.5" r="3"/>
+<circle class="dot other" cx="411.8" cy="252.0" r="3"/>
+<circle class="dot other" cx="435.0" cy="121.5" r="3"/>
+<circle class="dot other" cx="458.1" cy="153.0" r="3"/>
+<circle class="dot other" cx="481.3" cy="138.0" r="3"/>
+<circle class="dot other" cx="504.5" cy="63.0" r="3"/>
+<circle class="dot other" cx="527.7" cy="114.0" r="3"/>
+<circle class="dot other" cx="550.9" cy="255.0" r="3"/>
+<circle class="dot other" cx="574.1" cy="250.5" r="3"/>
+<circle class="dot other" cx="597.3" cy="84.0" r="3"/>
+<circle class="dot other" cx="620.4" cy="184.5" r="3"/>
+<circle class="dot other" cx="643.6" cy="205.5" r="3"/>
+<circle class="dot other" cx="666.8" cy="174.0" r="3"/>
+<circle class="dot other" cx="690.0" cy="124.5" r="3"/>
+<polyline class="line s0 " style="fill: none" points="64.0,256.5 87.2,263.2 110.4,217.5 133.6,192.8 156.7,183.3 179.9,179.8 203.1,181.7 226.3,181.3 249.5,180.4 272.7,173.6 295.9,181.5 319.0,179.8 342.2,174.0 365.4,154.9 388.6,157.1 411.8,155.4 435.0,161.6 458.1,158.6 481.3,159.2 504.5,150.9 527.7,158.6 550.9,156.6 574.1,156.4 597.3,151.1 620.4,155.6 643.6,165.2 666.8,181.1 690.0,182.6"/>
 <line class="line limit" x1="702" y1="224.0" x2="712" y2="224.0"/>
 <text class="limit-text" x="718" y="228.0">無料枠 67</text>
-<line class="line limit" x1="702" y1="192.8" x2="712" y2="192.8"/>
-<text class="limit-text" x="718" y="196.8">5ドル 88</text>
-<line class="line limit" x1="702" y1="171.1" x2="712" y2="171.1"/>
-<text class="limit-text" x="718" y="175.1">10ドル 108</text>
-<line class="line limit" x1="702" y1="130.3" x2="712" y2="130.3"/>
-<text class="limit-text" x="718" y="134.3">15ドル（予算） 129</text>
-<line class="line other" x1="702" y1="81.0" x2="712" y2="81.0"/>
-<text class="label" x="718" y="85.0">当日</text>
-<line class="line s0" x1="702" y1="155.1" x2="712" y2="155.1"/>
-<text class="label" x="718" y="159.1">直近7日の平均</text>
+<line class="line limit" x1="702" y1="198.6" x2="712" y2="198.6"/>
+<text class="limit-text" x="718" y="202.6">5ドル 88</text>
+<line class="line limit" x1="702" y1="161.5" x2="712" y2="161.5"/>
+<text class="limit-text" x="718" y="165.5">10ドル 108</text>
+<line class="line limit" x1="702" y1="140.5" x2="712" y2="140.5"/>
+<text class="limit-text" x="718" y="144.5">15ドル（予算） 129</text>
+<line class="line other" x1="702" y1="124.5" x2="712" y2="124.5"/>
+<text class="label" x="718" y="128.5">当日</text>
+<line class="line s0" x1="702" y1="182.6" x2="712" y2="182.6"/>
+<text class="label" x="718" y="186.6">直近7日の平均</text>
 </svg>

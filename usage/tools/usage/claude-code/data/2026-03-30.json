@@ -1,0 +1,495 @@
+{
+  "date": "2026-03-30",
+  "members": {
+    "alice-walker@example.com": {
+      "tokens": 225298190,
+      "active_seconds": 2897,
+      "sessions": 27,
+      "cost_usd": 152.9687,
+      "commits": 8,
+      "pull_requests": 5,
+      "lines_added": 1184,
+      "lines_removed": 136,
+      "entrypoints": {
+        "cli": 2028,
+        "claude-vscode": 869
+      },
+      "active_by_type": {
+        "cli": 2897,
+        "user": 1738
+      },
+      "tokens_by_type": {
+        "cacheRead": 209527317,
+        "cacheCreation": 11264910,
+        "input": 2252982,
+        "output": 2252982
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "main",
+          "cost_usd": 55.0687
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "high",
+          "query_source": "main",
+          "cost_usd": 12.2375
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "xhigh",
+          "query_source": "main",
+          "cost_usd": 12.2375
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "low",
+          "query_source": "main",
+          "cost_usd": 12.2375
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "subagent",
+          "cost_usd": 53.539
+        },
+        {
+          "model": "claude-haiku-5-5",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 7.6484
+        }
+      ],
+      "skills": {
+        "issue-work": 3
+      }
+    },
+    "ben-carter@example.com": {
+      "tokens": 272095226,
+      "active_seconds": 2795,
+      "sessions": 26,
+      "cost_usd": 196.0759,
+      "commits": 19,
+      "pull_requests": 1,
+      "lines_added": 2337,
+      "lines_removed": 304,
+      "entrypoints": {
+        "cli": 1956,
+        "claude-vscode": 838
+      },
+      "active_by_type": {
+        "cli": 2795,
+        "user": 1677
+      },
+      "tokens_by_type": {
+        "cacheRead": 253048560,
+        "cacheCreation": 13604761,
+        "input": 2720952,
+        "output": 2720952
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "query_source": "main",
+          "cost_usd": 99.9987
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "query_source": "subagent",
+          "cost_usd": 19.6076
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 9.8038
+        }
+      ],
+      "skills": {}
+    },
+    "chloe-evans@example.com": {
+      "tokens": 77651632,
+      "active_seconds": 893,
+      "sessions": 1,
+      "cost_usd": 50.6007,
+      "commits": 5,
+      "pull_requests": 0,
+      "lines_added": 650,
+      "lines_removed": 95,
+      "entrypoints": {
+        "cli": 625,
+        "claude-vscode": 268
+      },
+      "active_by_type": {
+        "cli": 893,
+        "user": 536
+      },
+      "tokens_by_type": {
+        "cacheRead": 72216018,
+        "cacheCreation": 3882582,
+        "input": 776516,
+        "output": 776516
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "query_source": "main",
+          "cost_usd": 25.8064
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "query_source": "subagent",
+          "cost_usd": 5.0601
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 2.53
+        }
+      ],
+      "skills": {}
+    },
+    "daniel-brooks@example.com": {
+      "tokens": 129500302,
+      "active_seconds": 1802,
+      "sessions": 16,
+      "cost_usd": 92.4928,
+      "commits": 7,
+      "pull_requests": 1,
+      "lines_added": 385,
+      "lines_removed": 119,
+      "entrypoints": {
+        "cli": 1261,
+        "claude-vscode": 541
+      },
+      "active_by_type": {
+        "cli": 1802,
+        "user": 1081
+      },
+      "tokens_by_type": {
+        "cacheRead": 120435281,
+        "cacheCreation": 6475015,
+        "input": 1295003,
+        "output": 1295003
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "main",
+          "cost_usd": 38.847
+        },
+        {
+          "model": "claude-haiku-4-5-20251001",
+          "effort": "high",
+          "query_source": "main",
+          "cost_usd": 25.898
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "subagent",
+          "cost_usd": 23.1232
+        },
+        {
+          "model": "claude-haiku-4-5-20251001",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 4.6246
+        }
+      ],
+      "skills": {
+        "issue-work": 2
+      }
+    },
+    "emma-hughes@example.com": {
+      "tokens": 282831754,
+      "active_seconds": 3134,
+      "sessions": 31,
+      "cost_usd": 158.7354,
+      "commits": 2,
+      "pull_requests": 2,
+      "lines_added": 128,
+      "lines_removed": 28,
+      "entrypoints": {
+        "cli": 2194,
+        "claude-vscode": 940
+      },
+      "active_by_type": {
+        "cli": 3134,
+        "user": 1880
+      },
+      "tokens_by_type": {
+        "cacheRead": 263033531,
+        "cacheCreation": 14141588,
+        "input": 2828318,
+        "output": 2828318
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "main",
+          "cost_usd": 61.9068
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "high",
+          "query_source": "main",
+          "cost_usd": 20.6356
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "low",
+          "query_source": "main",
+          "cost_usd": 20.6356
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "subagent",
+          "cost_usd": 47.6206
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 7.9368
+        }
+      ],
+      "skills": {
+        "issue-work": 1,
+        "md-writing": 1
+      }
+    },
+    "felix-grant@example.com": {
+      "tokens": 214977366,
+      "active_seconds": 2665,
+      "sessions": 9,
+      "cost_usd": 133.3092,
+      "commits": 11,
+      "pull_requests": 0,
+      "lines_added": 693,
+      "lines_removed": 55,
+      "entrypoints": {
+        "cli": 1865,
+        "claude-vscode": 800
+      },
+      "active_by_type": {
+        "cli": 2665,
+        "user": 1599
+      },
+      "tokens_by_type": {
+        "cacheRead": 199928950,
+        "cacheCreation": 10748868,
+        "input": 2149774,
+        "output": 2149774
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "main",
+          "cost_usd": 71.987
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "subagent",
+          "cost_usd": 6.6655
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 6.6655
+        }
+      ],
+      "skills": {}
+    },
+    "grace-turner@example.com": {
+      "tokens": 29970489,
+      "active_seconds": 355,
+      "sessions": 8,
+      "cost_usd": 20.4971,
+      "commits": 2,
+      "pull_requests": 1,
+      "lines_added": 182,
+      "lines_removed": 26,
+      "entrypoints": {
+        "cli": 248,
+        "claude-vscode": 106
+      },
+      "active_by_type": {
+        "cli": 355,
+        "user": 213
+      },
+      "tokens_by_type": {
+        "cacheRead": 27872555,
+        "cacheCreation": 1498524,
+        "input": 299705,
+        "output": 299705
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "main",
+          "cost_usd": 9.2237
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "high",
+          "query_source": "main",
+          "cost_usd": 6.1491
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "subagent",
+          "cost_usd": 4.0994
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 1.0249
+        }
+      ],
+      "skills": {
+        "rework-review": 1
+      }
+    },
+    "henry-ward@example.com": {
+      "tokens": 159801289,
+      "active_seconds": 1437,
+      "sessions": 10,
+      "cost_usd": 89.5043,
+      "commits": 7,
+      "pull_requests": 0,
+      "lines_added": 798,
+      "lines_removed": 63,
+      "entrypoints": {
+        "cli": 1006,
+        "claude-vscode": 431
+      },
+      "active_by_type": {
+        "cli": 1437,
+        "user": 862
+      },
+      "tokens_by_type": {
+        "cacheRead": 148615199,
+        "cacheCreation": 7990064,
+        "input": 1598013,
+        "output": 1598013
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "query_source": "main",
+          "cost_usd": 34.9067
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "medium",
+          "query_source": "main",
+          "cost_usd": 23.2711
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "query_source": "subagent",
+          "cost_usd": 26.8513
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 4.4752
+        }
+      ],
+      "skills": {
+        "issue-work": 1
+      }
+    },
+    "jack-foster@example.com": {
+      "tokens": 23790087,
+      "active_seconds": 231,
+      "sessions": 4,
+      "cost_usd": 13.9905,
+      "commits": 1,
+      "pull_requests": 0,
+      "lines_added": 92,
+      "lines_removed": 18,
+      "entrypoints": {
+        "cli": 162,
+        "claude-vscode": 69
+      },
+      "active_by_type": {
+        "cli": 231,
+        "user": 139
+      },
+      "tokens_by_type": {
+        "cacheRead": 22124781,
+        "cacheCreation": 1189504,
+        "input": 237901,
+        "output": 237901
+      },
+      "cost_by_model": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "main",
+          "cost_usd": 6.2957
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "medium",
+          "query_source": "subagent",
+          "cost_usd": 2.7981
+        },
+        {
+          "model": "claude-opus-5-5",
+          "effort": "none",
+          "query_source": "auxiliary",
+          "cost_usd": 0.6995
+        }
+      ],
+      "skills": {}
+    }
+  },
+  "issues": {
+    "alicew": {
+      "opened": 8,
+      "closed": 3
+    },
+    "chloe-e": {
+      "opened": 1,
+      "closed": 1
+    },
+    "dbrooks": {
+      "opened": 1,
+      "closed": 1
+    },
+    "emmah": {
+      "opened": 3,
+      "closed": 1
+    },
+    "gturner": {
+      "opened": 3,
+      "closed": 0
+    },
+    "islam": {
+      "opened": 0,
+      "closed": 1
+    }
+  }
+}

@@ -12,7 +12,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent / "usage" / "tools" / "usage"
 CC = ROOT / "claude-code"
 GA = ROOT / "github-actions"
-LAST = dt.date(2026, 11, 6)
+LAST = dt.date(2026, 4, 24)
+# どの表とグラフも直近4週を描くので、データも4週分だけ作る
+DAYS = 28
 DOMAIN = "example.com"
 # 1日に読むトークンのほとんどはキャッシュの読み込みで単価が低いので、費用1ドルあたりのトークンを大きく置く
 TOKENS_PER_USD = 1_600_000
@@ -129,7 +131,7 @@ def claude_code(rng: random.Random) -> None:
     data = CC / "data"
     shutil.rmtree(data, ignore_errors=True)
     data.mkdir()
-    for d in weekdays(LAST - dt.timedelta(days=27), LAST):
+    for d in weekdays(LAST - dt.timedelta(days=DAYS - 1), LAST):
         members, issues = {}, {}
         for m in MEMBERS:
             row = member_day(rng, m, d)
@@ -153,13 +155,13 @@ def github_actions(rng: random.Random) -> None:
     data = GA / "data"
     shutil.rmtree(data, ignore_errors=True)
     data.mkdir()
-    first = dt.date(2026, 10, 1)
-    for i in range((LAST - first).days + 1):
+    first = LAST - dt.timedelta(days=DAYS - 1)
+    for i in range(DAYS):
         d = first + dt.timedelta(days=i)
         repos: dict[str, list] = {}
         for repo, wf, event, runs, per in WORKFLOWS:
-            # issues で起動する集計を10月の後半に足し、11月に schedule へ移した、という増減を持たせる
-            if wf == "issue-triage" and not dt.date(2026, 10, 19) <= d <= dt.date(2026, 10, 31):
+            # issues で起動する集計を途中の2週だけ動かし、ワークフロー別の表に増減を持たせる
+            if wf == "issue-triage" and not first + dt.timedelta(days=7) <= d < first + dt.timedelta(days=21):
                 continue
             # 平日の回数の目安を、月の分数が無料枠を超えて予算に収まる程度に置く
             runs = max(1, round(runs * 0.45))

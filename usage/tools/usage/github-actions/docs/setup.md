@@ -43,7 +43,7 @@ token を作った人にそのリポジトリが見えていない。どちら�
 1日分を取り直すときは次のように流す。
 
 ```bash
-GITHUB_ORG=<組織> ORG_READ_TOKEN=$(gh auth token) python3 tools/usage/github-actions/collect.py --date 2026-11-03 --force
+GITHUB_ORG=<組織> ORG_READ_TOKEN=$(gh auth token) python3 tools/usage/github-actions/collect.py --date YYYY-MM-DD --force
 python3 tools/usage/github-actions/render.py
 ```
 

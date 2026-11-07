@@ -6,49 +6,49 @@
 
 分数が増えたワークフローについて、回数が増えたのか、1回あたりの分数が増えたのかを下の2つの表で見分ける。
 
-最終更新：2026-11-06 分まで
+最終更新：2026-04-24 分まで
 
 ## 分数
 
-| リポジトリ | ワークフロー | 起動のきっかけ | 10/12〜 | 10/19〜 | 10/26〜 | 11/2〜（途中） |
+| リポジトリ | ワークフロー | 起動のきっかけ | 3/30〜 | 4/6〜 | 4/13〜 | 4/20〜（途中） |
 |---|---|---|--:|--:|--:|--:|
-| web-app | e2e | `pull_request` | 163 | 136 | 197 | 167 |
-| web-app | CI | `pull_request` | 151 | 155 | 145 | 180 |
-| data-pipeline | nightly | `schedule` | 151 | 130 | 136 | 97 |
-| api-server | CI | `pull_request` | 97 | 86 | 113 | 68 |
-| mobile-app | Build | `pull_request` | 21 | 73 | 76 | 44 |
-| api-server | Deploy | `push` | 52 | 30 | 43 | 32 |
-| web-app | CI | `push` | 32 | 40 | 20 | 44 |
-| admin-console | CI | `pull_request` | 37 | 35 | 24 | 24 |
-| infra | terraform-plan | `pull_request` | 28 | 11 | 18 | 10 |
-| design-system | Delete merged branch | `pull_request` | 13 | 19 | 12 | 6 |
+| web-app | CI | `pull_request` | 116 | 150 | 157 | 136 |
+| data-pipeline | nightly | `schedule` | 150 | 138 | 135 | 89 |
+| web-app | e2e | `pull_request` | 104 | 191 | 117 | 96 |
+| api-server | CI | `pull_request` | 54 | 63 | 88 | 73 |
+| mobile-app | Build | `pull_request` | 47 | 46 | 83 | 45 |
+| web-app | CI | `push` | 59 | 55 | 50 | 25 |
+| api-server | Deploy | `push` | 51 | 39 | 24 | 29 |
+| admin-console | CI | `pull_request` | 19 | 22 | 40 | 4 |
+| infra | terraform-plan | `pull_request` | 24 | 11 | 15 | 27 |
+| design-system | Delete merged branch | `pull_request` | 16 | 14 | 20 | 16 |
 
 ## 回数
 
-| リポジトリ | ワークフロー | 起動のきっかけ | 10/12〜 | 10/19〜 | 10/26〜 | 11/2〜（途中） |
+| リポジトリ | ワークフロー | 起動のきっかけ | 3/30〜 | 4/6〜 | 4/13〜 | 4/20〜（途中） |
 |---|---|---|--:|--:|--:|--:|
-| web-app | e2e | `pull_request` | 17 | 14 | 21 | 18 |
-| web-app | CI | `pull_request` | 39 | 38 | 34 | 44 |
+| web-app | CI | `pull_request` | 28 | 36 | 37 | 32 |
 | data-pipeline | nightly | `schedule` | 7 | 7 | 7 | 5 |
-| api-server | CI | `pull_request` | 32 | 28 | 35 | 22 |
-| mobile-app | Build | `pull_request` | 3 | 10 | 10 | 6 |
-| api-server | Deploy | `push` | 8 | 5 | 6 | 5 |
-| web-app | CI | `push` | 8 | 9 | 5 | 11 |
-| admin-console | CI | `pull_request` | 18 | 17 | 12 | 12 |
-| infra | terraform-plan | `pull_request` | 9 | 4 | 5 | 3 |
-| design-system | Delete merged branch | `pull_request` | 13 | 19 | 12 | 6 |
+| web-app | e2e | `pull_request` | 11 | 20 | 12 | 10 |
+| api-server | CI | `pull_request` | 17 | 21 | 28 | 23 |
+| mobile-app | Build | `pull_request` | 6 | 6 | 11 | 6 |
+| web-app | CI | `push` | 14 | 14 | 12 | 6 |
+| api-server | Deploy | `push` | 7 | 6 | 4 | 4 |
+| admin-console | CI | `pull_request` | 9 | 10 | 19 | 2 |
+| infra | terraform-plan | `pull_request` | 7 | 4 | 5 | 8 |
+| design-system | Delete merged branch | `pull_request` | 16 | 14 | 20 | 16 |
 
 ## 1回あたりの分数
 
-| リポジトリ | ワークフロー | 起動のきっかけ | 10/12〜 | 10/19〜 | 10/26〜 | 11/2〜（途中） |
+| リポジトリ | ワークフロー | 起動のきっかけ | 3/30〜 | 4/6〜 | 4/13〜 | 4/20〜（途中） |
 |---|---|---|--:|--:|--:|--:|
-| web-app | e2e | `pull_request` | 9.6 | 9.7 | 9.4 | 9.3 |
-| web-app | CI | `pull_request` | 3.9 | 4.1 | 4.3 | 4.1 |
-| data-pipeline | nightly | `schedule` | 21.6 | 18.6 | 19.4 | 19.4 |
-| api-server | CI | `pull_request` | 3.0 | 3.1 | 3.2 | 3.1 |
-| mobile-app | Build | `pull_request` | 7.0 | 7.3 | 7.6 | 7.3 |
-| api-server | Deploy | `push` | 6.5 | 6.0 | 7.2 | 6.4 |
-| web-app | CI | `push` | 4.0 | 4.4 | 4.0 | 4.0 |
-| admin-console | CI | `pull_request` | 2.1 | 2.1 | 2.0 | 2.0 |
-| infra | terraform-plan | `pull_request` | 3.1 | 2.8 | 3.6 | 3.3 |
+| web-app | CI | `pull_request` | 4.1 | 4.2 | 4.2 | 4.2 |
+| data-pipeline | nightly | `schedule` | 21.4 | 19.7 | 19.3 | 17.8 |
+| web-app | e2e | `pull_request` | 9.5 | 9.6 | 9.8 | 9.6 |
+| api-server | CI | `pull_request` | 3.2 | 3.0 | 3.1 | 3.2 |
+| mobile-app | Build | `pull_request` | 7.8 | 7.7 | 7.5 | 7.5 |
+| web-app | CI | `push` | 4.2 | 3.9 | 4.2 | 4.2 |
+| api-server | Deploy | `push` | 7.3 | 6.5 | 6.0 | 7.2 |
+| admin-console | CI | `pull_request` | 2.1 | 2.2 | 2.1 | 2.0 |
+| infra | terraform-plan | `pull_request` | 3.4 | 2.8 | 3.0 | 3.4 |
 | design-system | Delete merged branch | `pull_request` | 1.0 | 1.0 | 1.0 | 1.0 |
