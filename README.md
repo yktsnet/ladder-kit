@@ -87,6 +87,10 @@ rm -rf claude-code/{data,members,charts} github-actions/{data,charts} claude-cod
 
 そのあとはコピーした `tools/usage/README.md` の「導入の手順」に従い、「組織に合わせて替える値」を直す。
 
+## 勉強会の資料
+
+評価の道具とは別に、客先常駐の社員向けAI勉強会の提案資料を [training/](training/README.md) に置いている。
+
 ## License
 
 MIT

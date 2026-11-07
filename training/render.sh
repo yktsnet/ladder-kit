@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# slides.html を PDF に印刷し、ページごとの PNG に書き出す。
+# 要るもの: chromium、pdftoppm（poppler）、Noto Sans CJK JP
+set -euo pipefail
+
+cd "$(dirname "$0")"
+tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT
+
+chromium --headless --no-pdf-header-footer \
+  --print-to-pdf="$tmp/slides.pdf" "file://$PWD/slides.html" 2>/dev/null
+
+rm -rf slides
+mkdir slides
+pdftoppm -png -scale-to-x 1600 -scale-to-y -1 "$tmp/slides.pdf" slides/
+# pdftoppm はページ数で桁を決めるので、01.png の形にそろえる
+for f in slides/-*.png; do
+  n=${f#slides/-}
+  mv "$f" "slides/$(printf '%02d' "$((10#${n%.png}))").png"
+done
+
+echo "Wrote $(ls slides | wc -l) slides to training/slides/"
