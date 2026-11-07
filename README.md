@@ -1,6 +1,7 @@
-# ladder-kit
+# mgmt-kit
 
-評価・標準化・採用を、1本の物差しの上で繋ぐ。
+採用・育成・評価を、1つの評価基準で回す。3つを別々の制度にせず、同じ源を読む。
+源は、配った型を回すと出てくる標準化された成果物と、型を回した記録である。
 
 - **軸を決める。** 何を測るかが決まると、標準化が何を揃えるべきかも決まる
 - **型を配る。** 標準化された手順をチームで回すと、成果物の形が揃う
@@ -13,49 +14,78 @@
 入れた人を育てる段になって尺度が合わない。3つを別々の制度として持つと、
 繋ぎ目を人が埋め続けることになる。
 
-型を配る側は [sdlc-kit](https://github.com/yktsnet/sdlc-kit) が持つ。このリポは、
-そこから出てくる成果物を読むための物差しと、採点の手順を持つ。
+型を配る側は [sdlc-kit](https://github.com/yktsnet/sdlc-kit) が受け持つ。このリポは評価基準と、源を読む2つの道具を持つ。
+
+| 道具 | 答える問い | 読むもの | 置き場 |
+|---|---|---|---|
+| ladder | 1人がどの段階にいて、次にどの軸を上げるか | リポジトリの成果物 | `ladder/` |
+| usage | 1人が配られた型を回し、仕事を進め、十分に使っているか | Claude Code の利用データ | `usage/` |
+
+## 評価で何を見るか
+
+段階は ladder の判定文で決め、成果物を読んで確かめる。usage はそこへ3つの観点を足す。
+
+- **標準化**：スキルの回数と名前で数えられる。評価の軸そのものが標準化を進める試みなので、B 軸（配られた型の運用）にそのまま使える
+- **作業の量**：Issue・PR・commit・行数
+- **投入の量**：まず絶対数を見て、足りていれば使い方の効率を見る
+
+usage は GitHub で Issue と PR を中心に仕事を進め、Claude Code を使うチームを前提にしており、GitLab や別のエージェントで進めた仕事は評価できない。
+3つがそろった姿と崩れ方ごとの打つ手、前提の理由は [あるべき姿](usage/tools/usage/claude-code/README.md#あるべき姿) にある。
+
+候補者には利用データが無いので、usage は在籍者にだけ当てる。
+
+## ladder：評価基準
 
 | | 中身 |
 |---|---|
-| [docs/ladder.md](docs/ladder.md) | 正本。5軸5段階と各セルの判定文、判定に読むもの |
-| [docs/personas.md](docs/personas.md) | 各段階の参照ペルソナ。軸の凸凹を持たせた5人 |
-| [docs/scoring.md](docs/scoring.md) | 在籍者を採点し、次に上げる軸を決めるまでの手順 |
-| [docs/hiring.md](docs/hiring.md) | 同じ軸を候補者に当てる手順。証拠源の替え方 |
-| [docs/adapt.md](docs/adapt.md) | 自社へ持ち込むときの差し替え方 |
-| [docs/ref/sources.md](docs/ref/sources.md) | 下敷きにした公開ラダーとライセンス |
+| [ladder/docs/ladder.md](ladder/docs/ladder.md) | 正本。5軸5段階と各セルの判定文、判定に読むもの |
+| [ladder/docs/personas.md](ladder/docs/personas.md) | 各段階の参照ペルソナ。軸の凸凹を持たせた5人 |
+| [ladder/docs/scoring.md](ladder/docs/scoring.md) | 在籍者を採点し、次に上げる軸を決めるまでの手順 |
+| [ladder/docs/hiring.md](ladder/docs/hiring.md) | 同じ軸を候補者に当てる手順。証拠源の替え方 |
+| [ladder/docs/adapt.md](ladder/docs/adapt.md) | 自社へ持ち込むときの差し替え方 |
+| [ladder/docs/ref/sources.md](ladder/docs/ref/sources.md) | 下敷きにした公開ラダーとライセンス |
 
-## 軸が先に来る
+### 軸が先に来る
 
 標準化を先にやると、揃えるものが「書式」で止まる。何を測るかを決めてから型を配ると、
 型は測りたいものが成果物に出る形になる。
 
-`docs/ladder.md` の判定文が `PLAN.md` や `docs/guarantees.md` を名指ししているのはそのためで、
 **判定文と型の置き場が1対1で対応している。** 型に無い置き場を判定文が指していたら、
-どちらかが間違っている。
+どちらかが間違っている。型を配る前にこの評価基準を当てると、判定文の大半が空欄になる。
 
-## 採点を回す
+### 採点を回す
 
-`.claude/skills/ladder-score/` に、採点する skill が入っている。採点する相手の成果物が
+`ladder/.claude/skills/ladder-score/` に、採点する skill が入っている。採点する相手の成果物が
 あるリポジトリへ、`docs/` ごとコピーして使う。
 
 ```bash
-git clone https://github.com/yktsnet/ladder-kit.git
-cp ladder-kit/docs/{ladder,scoring,hiring,adapt}.md ~/repos/target/docs/
-cp -r ladder-kit/.claude/skills/ladder-score ~/repos/target/.claude/skills/
+git clone https://github.com/yktsnet/mgmt-kit.git
+cp mgmt-kit/ladder/docs/{ladder,scoring,hiring,adapt}.md ~/repos/target/docs/
+cp -r mgmt-kit/ladder/.claude/skills/ladder-score ~/repos/target/.claude/skills/
 ```
 
-skill は判定文を暗記や印象で当てず、各セルの「読むもの」を実際に開いて根拠を引く。出るのは
-5軸の点と次に上げる1軸で、総合点は出さない。**採点結果は既定でファイルに書かない。**
+出るのは5軸の点と次に上げる1軸である。**採点結果は既定でファイルに書かない**ので、
 置き場と実名の扱いは、残すと決めた側が先に決める。
 
-## 測る対象について
+## usage：Claude Code の利用状況
 
-エージェントを走らせる開発では、実装の速さは人の差になりにくい。差は、配られた型に
-乗れるか、乗ったうえで型を直せるかへ移る。B 軸を独立して置いてあるのはそのためで、
-この軸だけは**型を配っていない組織では測れない**。
+Claude Code の利用データをメンバー別に毎日並べ、直近2週の費用から1人ずつ要る seat も出す。組織の GitHub Actions の分数も数える。
 
-型を配る前にこの物差しを当てると、判定文の大半が空欄になる。順序は入れ替えられない。
+サンプルは [Claude Code の利用状況](usage/tools/usage/claude-code/README.md) と [Actions の分数](usage/tools/usage/github-actions/README.md) にある。
+どちらも架空の10人と8リポのダミーデータから作った。あるべき姿の人と、崩れ方の型ごとの人が入っている。
+`scripts/sample-usage.py` がダミーデータを作り、続けて各集計の `render.py` で表とグラフを作り直す。
+
+### 取り込む
+
+`usage/` は取り込み先の配置を写した形になっている。集計を置く管理用のリポジトリへコピーし、サンプルのデータと名簿を消す。
+
+```bash
+cp -R mgmt-kit/usage/. <管理用のリポジトリ>/
+cd <管理用のリポジトリ>/tools/usage
+rm -rf claude-code/{data,members,charts} github-actions/{data,charts} claude-code/{seats,github}.json
+```
+
+そのあとはコピーした `tools/usage/README.md` の「導入の手順」に従い、「組織に合わせて替える値」を直す。
 
 ## License
 

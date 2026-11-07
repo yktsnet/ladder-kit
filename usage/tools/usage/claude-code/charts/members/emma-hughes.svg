@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="512" viewBox="0 0 720 512">
+<style>
+svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --alert: #e34948;
+      --s0: #2a78d6; --s1: #eb6834; --s2: #1baf7a; --s3: #eda100; --s4: #e87ba4; --s5: #008300; --s6: #6250d6; --s7: #e34948;
+      font-family: -apple-system, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface: #1a1a19; --text: #ffffff; --muted: #c3c2b7; --grid: #3a3936; --alert: #e66767;
+        --s0: #3987e5; --s1: #d95926; --s2: #199e70; --s3: #c98500; --s4: #d55181; --s5: #008300; --s6: #9085e9; --s7: #e66767; }
+}
+.surface { fill: var(--surface); } .label { fill: var(--text); font-size: 13px; }
+.muted { fill: var(--muted); font-size: 11px; } .grid { stroke: var(--grid); stroke-width: 1; }
+.line { stroke-width: 2; fill: none; } .dash { stroke-dasharray: 6 4; }
+.dot { stroke: var(--surface); stroke-width: 2; }
+.other { stroke: var(--muted); fill: var(--muted); }
+.limit { stroke: var(--alert); stroke-width: 1.5; stroke-dasharray: 4 3; } .limit-text { fill: var(--alert); font-size: 11px; }
+.s0 { stroke: var(--s0); fill: var(--s0); }
+.s1 { stroke: var(--s1); fill: var(--s1); }
+.s2 { stroke: var(--s2); fill: var(--s2); }
+.s3 { stroke: var(--s3); fill: var(--s3); }
+.s4 { stroke: var(--s4); fill: var(--s4); }
+.s5 { stroke: var(--s5); fill: var(--s5); }
+.s6 { stroke: var(--s6); fill: var(--s6); }
+.s7 { stroke: var(--s7); fill: var(--s7); }
+</style>
+<rect class="surface" width="720" height="512" rx="8"/>
+<text class="label" x="56" y="28">トークン量</text>
+<line class="grid" x1="56" y1="134.0" x2="696" y2="134.0"/>
+<text class="muted" x="48" y="138.0" text-anchor="end">0</text>
+<line class="grid" x1="56" y1="88.0" x2="696" y2="88.0"/>
+<text class="muted" x="48" y="92.0" text-anchor="end">150M</text>
+<line class="grid" x1="56" y1="42.0" x2="696" y2="42.0"/>
+<text class="muted" x="48" y="46.0" text-anchor="end">300M</text>
+<path class="s0" d="M65.0,134 v-84.7 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v84.7 z"/>
+<path class="s0" d="M97.0,134 v-25.6 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v25.6 z"/>
+<path class="s0" d="M129.0,134 v-55.1 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v55.1 z"/>
+<path class="s0" d="M193.0,134 v-76.0 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v76.0 z"/>
+<path class="s0" d="M225.0,134 v-32.1 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v32.1 z"/>
+<path class="s0" d="M257.0,134 v-30.5 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v30.5 z"/>
+<path class="s0" d="M289.0,134 v-74.3 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v74.3 z"/>
+<path class="s0" d="M321.0,134 v-58.3 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v58.3 z"/>
+<path class="s0" d="M353.0,134 v-30.9 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v30.9 z"/>
+<path class="s0" d="M385.0,134 v-32.0 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v32.0 z"/>
+<path class="s0" d="M417.0,134 v-46.6 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v46.6 z"/>
+<path class="s0" d="M449.0,134 v-37.4 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v37.4 z"/>
+<path class="s0" d="M481.0,134 v-41.6 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v41.6 z"/>
+<path class="s0" d="M513.0,134 v-34.1 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v34.1 z"/>
+<path class="s0" d="M545.0,134 v-54.1 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v54.1 z"/>
+<path class="s0" d="M577.0,134 v-24.6 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v24.6 z"/>
+<path class="s0" d="M609.0,134 v-48.5 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v48.5 z"/>
+<path class="s0" d="M641.0,134 v-33.4 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v33.4 z"/>
+<path class="s0" d="M673.0,134 v-27.0 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v27.0 z"/>
+<text class="muted" x="72.0" y="150" text-anchor="middle">3/30</text>
+<text class="muted" x="72.0" y="164" text-anchor="middle">月</text>
+<text class="muted" x="104.0" y="150" text-anchor="middle">31</text>
+<text class="muted" x="104.0" y="164" text-anchor="middle">火</text>
+<text class="muted" x="136.0" y="150" text-anchor="middle">4/1</text>
+<text class="muted" x="136.0" y="164" text-anchor="middle">水</text>
+<text class="muted" x="168.0" y="150" text-anchor="middle">2</text>
+<text class="muted" x="168.0" y="164" text-anchor="middle">木</text>
+<text class="muted" x="200.0" y="150" text-anchor="middle">3</text>
+<text class="muted" x="200.0" y="164" text-anchor="middle">金</text>
+<text class="muted" x="232.0" y="150" text-anchor="middle">6</text>
+<text class="muted" x="232.0" y="164" text-anchor="middle">月</text>
+<text class="muted" x="264.0" y="150" text-anchor="middle">7</text>
+<text class="muted" x="264.0" y="164" text-anchor="middle">火</text>
+<text class="muted" x="296.0" y="150" text-anchor="middle">8</text>
+<text class="muted" x="296.0" y="164" text-anchor="middle">水</text>
+<text class="muted" x="328.0" y="150" text-anchor="middle">9</text>
+<text class="muted" x="328.0" y="164" text-anchor="middle">木</text>
+<text class="muted" x="360.0" y="150" text-anchor="middle">10</text>
+<text class="muted" x="360.0" y="164" text-anchor="middle">金</text>
+<text class="muted" x="392.0" y="150" text-anchor="middle">13</text>
+<text class="muted" x="392.0" y="164" text-anchor="middle">月</text>
+<text class="muted" x="424.0" y="150" text-anchor="middle">14</text>
+<text class="muted" x="424.0" y="164" text-anchor="middle">火</text>
+<text class="muted" x="456.0" y="150" text-anchor="middle">15</text>
+<text class="muted" x="456.0" y="164" text-anchor="middle">水</text>
+<text class="muted" x="488.0" y="150" text-anchor="middle">16</text>
+<text class="muted" x="488.0" y="164" text-anchor="middle">木</text>
+<text class="muted" x="520.0" y="150" text-anchor="middle">17</text>
+<text class="muted" x="520.0" y="164" text-anchor="middle">金</text>
+<text class="muted" x="552.0" y="150" text-anchor="middle">20</text>
+<text class="muted" x="552.0" y="164" text-anchor="middle">月</text>
+<text class="muted" x="584.0" y="150" text-anchor="middle">21</text>
+<text class="muted" x="584.0" y="164" text-anchor="middle">火</text>
+<text class="muted" x="616.0" y="150" text-anchor="middle">22</text>
+<text class="muted" x="616.0" y="164" text-anchor="middle">水</text>
+<text class="muted" x="648.0" y="150" text-anchor="middle">23</text>
+<text class="muted" x="648.0" y="164" text-anchor="middle">木</text>
+<text class="muted" x="680.0" y="150" text-anchor="middle">24</text>
+<text class="muted" x="680.0" y="164" text-anchor="middle">金</text>
+<text class="label" x="56" y="196">利用時間（並行した会話の分は足し合わせる）</text>
+<line class="grid" x1="56" y1="302.0" x2="696" y2="302.0"/>
+<text class="muted" x="48" y="306.0" text-anchor="end">0</text>
+<line class="grid" x1="56" y1="256.0" x2="696" y2="256.0"/>
+<text class="muted" x="48" y="260.0" text-anchor="end">30分</text>
+<line class="grid" x1="56" y1="210.0" x2="696" y2="210.0"/>
+<text class="muted" x="48" y="214.0" text-anchor="end">60分</text>
+<path class="s0" d="M65.0,302 v-78.1 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v78.1 z"/>
+<path class="s0" d="M97.0,302 v-28.4 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v28.4 z"/>
+<path class="s0" d="M129.0,302 v-51.1 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v51.1 z"/>
+<path class="s0" d="M193.0,302 v-80.8 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v80.8 z"/>
+<path class="s0" d="M225.0,302 v-25.2 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v25.2 z"/>
+<path class="s0" d="M257.0,302 v-28.0 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v28.0 z"/>
+<path class="s0" d="M289.0,302 v-77.4 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v77.4 z"/>
+<path class="s0" d="M321.0,302 v-47.1 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v47.1 z"/>
+<path class="s0" d="M353.0,302 v-25.7 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v25.7 z"/>
+<path class="s0" d="M385.0,302 v-28.9 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v28.9 z"/>
+<path class="s0" d="M417.0,302 v-45.0 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v45.0 z"/>
+<path class="s0" d="M449.0,302 v-33.2 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v33.2 z"/>
+<path class="s0" d="M481.0,302 v-28.3 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v28.3 z"/>
+<path class="s0" d="M513.0,302 v-38.7 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v38.7 z"/>
+<path class="s0" d="M545.0,302 v-41.9 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v41.9 z"/>
+<path class="s0" d="M577.0,302 v-30.5 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v30.5 z"/>
+<path class="s0" d="M609.0,302 v-39.0 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v39.0 z"/>
+<path class="s0" d="M641.0,302 v-31.9 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v31.9 z"/>
+<path class="s0" d="M673.0,302 v-26.2 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v26.2 z"/>
+<text class="muted" x="72.0" y="318" text-anchor="middle">3/30</text>
+<text class="muted" x="72.0" y="332" text-anchor="middle">月</text>
+<text class="muted" x="104.0" y="318" text-anchor="middle">31</text>
+<text class="muted" x="104.0" y="332" text-anchor="middle">火</text>
+<text class="muted" x="136.0" y="318" text-anchor="middle">4/1</text>
+<text class="muted" x="136.0" y="332" text-anchor="middle">水</text>
+<text class="muted" x="168.0" y="318" text-anchor="middle">2</text>
+<text class="muted" x="168.0" y="332" text-anchor="middle">木</text>
+<text class="muted" x="200.0" y="318" text-anchor="middle">3</text>
+<text class="muted" x="200.0" y="332" text-anchor="middle">金</text>
+<text class="muted" x="232.0" y="318" text-anchor="middle">6</text>
+<text class="muted" x="232.0" y="332" text-anchor="middle">月</text>
+<text class="muted" x="264.0" y="318" text-anchor="middle">7</text>
+<text class="muted" x="264.0" y="332" text-anchor="middle">火</text>
+<text class="muted" x="296.0" y="318" text-anchor="middle">8</text>
+<text class="muted" x="296.0" y="332" text-anchor="middle">水</text>
+<text class="muted" x="328.0" y="318" text-anchor="middle">9</text>
+<text class="muted" x="328.0" y="332" text-anchor="middle">木</text>
+<text class="muted" x="360.0" y="318" text-anchor="middle">10</text>
+<text class="muted" x="360.0" y="332" text-anchor="middle">金</text>
+<text class="muted" x="392.0" y="318" text-anchor="middle">13</text>
+<text class="muted" x="392.0" y="332" text-anchor="middle">月</text>
+<text class="muted" x="424.0" y="318" text-anchor="middle">14</text>
+<text class="muted" x="424.0" y="332" text-anchor="middle">火</text>
+<text class="muted" x="456.0" y="318" text-anchor="middle">15</text>
+<text class="muted" x="456.0" y="332" text-anchor="middle">水</text>
+<text class="muted" x="488.0" y="318" text-anchor="middle">16</text>
+<text class="muted" x="488.0" y="332" text-anchor="middle">木</text>
+<text class="muted" x="520.0" y="318" text-anchor="middle">17</text>
+<text class="muted" x="520.0" y="332" text-anchor="middle">金</text>
+<text class="muted" x="552.0" y="318" text-anchor="middle">20</text>
+<text class="muted" x="552.0" y="332" text-anchor="middle">月</text>
+<text class="muted" x="584.0" y="318" text-anchor="middle">21</text>
+<text class="muted" x="584.0" y="332" text-anchor="middle">火</text>
+<text class="muted" x="616.0" y="318" text-anchor="middle">22</text>
+<text class="muted" x="616.0" y="332" text-anchor="middle">水</text>
+<text class="muted" x="648.0" y="318" text-anchor="middle">23</text>
+<text class="muted" x="648.0" y="332" text-anchor="middle">木</text>
+<text class="muted" x="680.0" y="318" text-anchor="middle">24</text>
+<text class="muted" x="680.0" y="332" text-anchor="middle">金</text>
+<text class="label" x="56" y="364">commit と PR</text>
+<rect class="s1" x="650" y="354" width="10" height="10" rx="2"/>
+<text class="muted" x="664" y="364">PR</text>
+<rect class="s0" x="572" y="354" width="10" height="10" rx="2"/>
+<text class="muted" x="586" y="364">commit</text>
+<line class="grid" x1="56" y1="470.0" x2="696" y2="470.0"/>
+<text class="muted" x="48" y="474.0" text-anchor="end">0</text>
+<line class="grid" x1="56" y1="424.0" x2="696" y2="424.0"/>
+<text class="muted" x="48" y="428.0" text-anchor="end">8</text>
+<line class="grid" x1="56" y1="378.0" x2="696" y2="378.0"/>
+<text class="muted" x="48" y="382.0" text-anchor="end">15</text>
+<path class="s0" d="M59.0,470 v-10.3 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v10.3 z"/>
+<path class="s1" d="M73.0,470 v-10.3 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v10.3 z"/>
+<path class="s0" d="M91.0,470 v-4.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v4.1 z"/>
+<path class="s1" d="M105.0,470 v-4.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v4.1 z"/>
+<path class="s0" d="M123.0,470 v-4.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v4.1 z"/>
+<path class="s0" d="M187.0,470 v-22.5 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v22.5 z"/>
+<path class="s1" d="M201.0,470 v-10.3 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v10.3 z"/>
+<path class="s0" d="M219.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
+<path class="s1" d="M233.0,470 v-4.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v4.1 z"/>
+<path class="s0" d="M251.0,470 v-22.5 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v22.5 z"/>
+<path class="s0" d="M283.0,470 v-83.9 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v83.9 z"/>
+<path class="s1" d="M297.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
+<path class="s0" d="M315.0,470 v-40.9 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v40.9 z"/>
+<path class="s1" d="M329.0,470 v-4.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v4.1 z"/>
+<path class="s0" d="M347.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
+<path class="s1" d="M361.0,470 v-4.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v4.1 z"/>
+<path class="s0" d="M379.0,470 v-16.4 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v16.4 z"/>
+<path class="s0" d="M411.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
+<path class="s1" d="M425.0,470 v-4.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v4.1 z"/>
+<path class="s0" d="M443.0,470 v-53.2 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v53.2 z"/>
+<path class="s1" d="M457.0,470 v-22.5 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v22.5 z"/>
+<path class="s0" d="M475.0,470 v-4.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v4.1 z"/>
+<path class="s0" d="M507.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
+<path class="s1" d="M521.0,470 v-22.5 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v22.5 z"/>
+<path class="s0" d="M571.0,470 v-22.5 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v22.5 z"/>
+<path class="s1" d="M585.0,470 v-10.3 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v10.3 z"/>
+<path class="s0" d="M603.0,470 v-47.1 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v47.1 z"/>
+<path class="s1" d="M617.0,470 v-22.5 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v22.5 z"/>
+<path class="s0" d="M635.0,470 v-10.3 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v10.3 z"/>
+<path class="s0" d="M667.0,470 v-34.8 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v34.8 z"/>
+<path class="s1" d="M681.0,470 v-16.4 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v16.4 z"/>
+<text class="muted" x="72.0" y="486" text-anchor="middle">3/30</text>
+<text class="muted" x="72.0" y="500" text-anchor="middle">月</text>
+<text class="muted" x="104.0" y="486" text-anchor="middle">31</text>
+<text class="muted" x="104.0" y="500" text-anchor="middle">火</text>
+<text class="muted" x="136.0" y="486" text-anchor="middle">4/1</text>
+<text class="muted" x="136.0" y="500" text-anchor="middle">水</text>
+<text class="muted" x="168.0" y="486" text-anchor="middle">2</text>
+<text class="muted" x="168.0" y="500" text-anchor="middle">木</text>
+<text class="muted" x="200.0" y="486" text-anchor="middle">3</text>
+<text class="muted" x="200.0" y="500" text-anchor="middle">金</text>
+<text class="muted" x="232.0" y="486" text-anchor="middle">6</text>
+<text class="muted" x="232.0" y="500" text-anchor="middle">月</text>
+<text class="muted" x="264.0" y="486" text-anchor="middle">7</text>
+<text class="muted" x="264.0" y="500" text-anchor="middle">火</text>
+<text class="muted" x="296.0" y="486" text-anchor="middle">8</text>
+<text class="muted" x="296.0" y="500" text-anchor="middle">水</text>
+<text class="muted" x="328.0" y="486" text-anchor="middle">9</text>
+<text class="muted" x="328.0" y="500" text-anchor="middle">木</text>
+<text class="muted" x="360.0" y="486" text-anchor="middle">10</text>
+<text class="muted" x="360.0" y="500" text-anchor="middle">金</text>
+<text class="muted" x="392.0" y="486" text-anchor="middle">13</text>
+<text class="muted" x="392.0" y="500" text-anchor="middle">月</text>
+<text class="muted" x="424.0" y="486" text-anchor="middle">14</text>
+<text class="muted" x="424.0" y="500" text-anchor="middle">火</text>
+<text class="muted" x="456.0" y="486" text-anchor="middle">15</text>
+<text class="muted" x="456.0" y="500" text-anchor="middle">水</text>
+<text class="muted" x="488.0" y="486" text-anchor="middle">16</text>
+<text class="muted" x="488.0" y="500" text-anchor="middle">木</text>
+<text class="muted" x="520.0" y="486" text-anchor="middle">17</text>
+<text class="muted" x="520.0" y="500" text-anchor="middle">金</text>
+<text class="muted" x="552.0" y="486" text-anchor="middle">20</text>
+<text class="muted" x="552.0" y="500" text-anchor="middle">月</text>
+<text class="muted" x="584.0" y="486" text-anchor="middle">21</text>
+<text class="muted" x="584.0" y="500" text-anchor="middle">火</text>
+<text class="muted" x="616.0" y="486" text-anchor="middle">22</text>
+<text class="muted" x="616.0" y="500" text-anchor="middle">水</text>
+<text class="muted" x="648.0" y="486" text-anchor="middle">23</text>
+<text class="muted" x="648.0" y="500" text-anchor="middle">木</text>
+<text class="muted" x="680.0" y="486" text-anchor="middle">24</text>
+<text class="muted" x="680.0" y="500" text-anchor="middle">金</text>
+</svg>
