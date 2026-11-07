@@ -34,7 +34,7 @@ usage は GitHub で Issue と PR を中心に仕事を進め、Claude Code を�
 
 候補者には利用データが無いので、usage は在籍者にだけ当てる。
 
-## ladder：評価の評価基準
+## ladder：評価基準
 
 | | 中身 |
 |---|---|
