@@ -1,0 +1,63 @@
+name: Usage reports
+
+on:
+  schedule:
+    # 火〜土の 1:00 JST。前日分が New Relic に出そろってから取る。
+    # 土日分は表にも図にも出さないので、日・月の実行は飛ばす
+    - cron: "0 16 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Fetch only this JST date (YYYY-MM-DD). Leave empty to fill the weekdays of the last 7 days."
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: usage
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect
+        env:
+          NEW_RELIC_USER_KEY: ${{ secrets.NEW_RELIC_USER_KEY }}
+          NEW_RELIC_ACCOUNT_ID: ${{ vars.NEW_RELIC_ACCOUNT_ID }}
+          EMAIL_DOMAIN: ${{ vars.EMAIL_DOMAIN }}
+          GITHUB_ORG: ${{ vars.GITHUB_ORG }}
+          ORG_READ_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+          DATE: ${{ inputs.date }}
+        run: python tools/usage/claude-code/collect.py ${DATE:+--date "$DATE" --force}
+      # Issue の数が取れずに Collect が落ちても、New Relic の分は書けているので反映する
+      - name: Render
+        if: ${{ !cancelled() }}
+        run: python tools/usage/claude-code/render.py
+      # Actions の実行記録は消えないので、日・月の実行を飛ばしても次の実行で土日の分まで埋まる
+      - name: Collect Actions minutes
+        if: ${{ !cancelled() }}
+        env:
+          GITHUB_ORG: ${{ vars.GITHUB_ORG }}
+          ORG_READ_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+        run: python tools/usage/github-actions/collect.py
+      - name: Render Actions minutes
+        if: ${{ !cancelled() }}
+        run: python tools/usage/github-actions/render.py
+      - name: Commit
+        if: ${{ !cancelled() }}
+        run: |
+          git add tools/usage
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "利用状況のレポートを更新する"
+          git push

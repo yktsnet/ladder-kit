@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="368" viewBox="0 0 880 368">
+<style>
+svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --alert: #e34948;
+      --s0: #2a78d6; --s1: #eb6834; --s2: #1baf7a; --s3: #eda100; --s4: #e87ba4; --s5: #008300; --s6: #6250d6; --s7: #e34948;
+      font-family: -apple-system, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface: #1a1a19; --text: #ffffff; --muted: #c3c2b7; --grid: #3a3936; --alert: #e66767;
+        --s0: #3987e5; --s1: #d95926; --s2: #199e70; --s3: #c98500; --s4: #d55181; --s5: #008300; --s6: #9085e9; --s7: #e66767; }
+}
+.surface { fill: var(--surface); } .label { fill: var(--text); font-size: 13px; }
+.muted { fill: var(--muted); font-size: 11px; } .grid { stroke: var(--grid); stroke-width: 1; }
+.line { stroke-width: 2; fill: none; } .dash { stroke-dasharray: 6 4; }
+.dot { stroke: var(--surface); stroke-width: 2; }
+.other { stroke: var(--muted); fill: var(--muted); }
+.limit { stroke: var(--alert); stroke-width: 1.5; stroke-dasharray: 4 3; } .limit-text { fill: var(--alert); font-size: 11px; }
+.s0 { stroke: var(--s0); fill: var(--s0); }
+.s1 { stroke: var(--s1); fill: var(--s1); }
+.s2 { stroke: var(--s2); fill: var(--s2); }
+.s3 { stroke: var(--s3); fill: var(--s3); }
+.s4 { stroke: var(--s4); fill: var(--s4); }
+.s5 { stroke: var(--s5); fill: var(--s5); }
+.s6 { stroke: var(--s6); fill: var(--s6); }
+.s7 { stroke: var(--s7); fill: var(--s7); }
+</style>
+<rect class="surface" width="880" height="368" rx="8"/>
+<line class="grid" x1="64" y1="324.0" x2="690" y2="324.0"/>
+<text class="muted" x="56" y="328.0" text-anchor="end">0</text>
+<line class="grid" x1="64" y1="249.0" x2="690" y2="249.0"/>
+<text class="muted" x="56" y="253.0" text-anchor="end">50</text>
+<line class="grid" x1="64" y1="174.0" x2="690" y2="174.0"/>
+<text class="muted" x="56" y="178.0" text-anchor="end">100</text>
+<line class="grid" x1="64" y1="99.0" x2="690" y2="99.0"/>
+<text class="muted" x="56" y="103.0" text-anchor="end">150</text>
+<line class="grid" x1="64" y1="24.0" x2="690" y2="24.0"/>
+<text class="muted" x="56" y="28.0" text-anchor="end">200</text>
+<text class="muted" x="64.0" y="346" text-anchor="middle">10/10</text>
+<text class="muted" x="110.4" y="346" text-anchor="middle">12</text>
+<text class="muted" x="272.7" y="346" text-anchor="middle">19</text>
+<text class="muted" x="435.0" y="346" text-anchor="middle">26</text>
+<text class="muted" x="574.1" y="346" text-anchor="middle">11/1</text>
+<text class="muted" x="597.3" y="346" text-anchor="middle">2</text>
+<line class="limit" x1="64" y1="224.0" x2="690" y2="224.0"/>
+<line class="limit" x1="64" y1="192.8" x2="690" y2="192.8"/>
+<line class="limit" x1="64" y1="161.5" x2="690" y2="161.5"/>
+<line class="limit" x1="64" y1="130.3" x2="690" y2="130.3"/>
+<polyline class="line other " style="fill: none" points="64.0,279.0 87.2,249.0 110.4,196.5 133.6,171.0 156.7,133.5 179.9,126.0 203.1,78.0 226.3,265.5 249.5,256.5 272.7,139.5 295.9,159.0 319.0,187.5 342.2,138.0 365.4,264.0 388.6,270.0 411.8,255.0 435.0,165.0 458.1,142.5 481.3,100.5 504.5,171.0 527.7,205.5 550.9,246.0 574.1,247.5 597.3,150.0 620.4,118.5 643.6,157.5 666.8,121.5 690.0,204.0"/>
+<circle class="dot other" cx="64.0" cy="279.0" r="3"/>
+<circle class="dot other" cx="87.2" cy="249.0" r="3"/>
+<circle class="dot other" cx="110.4" cy="196.5" r="3"/>
+<circle class="dot other" cx="133.6" cy="171.0" r="3"/>
+<circle class="dot other" cx="156.7" cy="133.5" r="3"/>
+<circle class="dot other" cx="179.9" cy="126.0" r="3"/>
+<circle class="dot other" cx="203.1" cy="78.0" r="3"/>
+<circle class="dot other" cx="226.3" cy="265.5" r="3"/>
+<circle class="dot other" cx="249.5" cy="256.5" r="3"/>
+<circle class="dot other" cx="272.7" cy="139.5" r="3"/>
+<circle class="dot other" cx="295.9" cy="159.0" r="3"/>
+<circle class="dot other" cx="319.0" cy="187.5" r="3"/>
+<circle class="dot other" cx="342.2" cy="138.0" r="3"/>
+<circle class="dot other" cx="365.4" cy="264.0" r="3"/>
+<circle class="dot other" cx="388.6" cy="270.0" r="3"/>
+<circle class="dot other" cx="411.8" cy="255.0" r="3"/>
+<circle class="dot other" cx="435.0" cy="165.0" r="3"/>
+<circle class="dot other" cx="458.1" cy="142.5" r="3"/>
+<circle class="dot other" cx="481.3" cy="100.5" r="3"/>
+<circle class="dot other" cx="504.5" cy="171.0" r="3"/>
+<circle class="dot other" cx="527.7" cy="205.5" r="3"/>
+<circle class="dot other" cx="550.9" cy="246.0" r="3"/>
+<circle class="dot other" cx="574.1" cy="247.5" r="3"/>
+<circle class="dot other" cx="597.3" cy="150.0" r="3"/>
+<circle class="dot other" cx="620.4" cy="118.5" r="3"/>
+<circle class="dot other" cx="643.6" cy="157.5" r="3"/>
+<circle class="dot other" cx="666.8" cy="121.5" r="3"/>
+<circle class="dot other" cx="690.0" cy="204.0" r="3"/>
+<polyline class="line s0 " style="fill: none" points="64.0,279.0 87.2,264.0 110.4,241.5 133.6,223.9 156.7,205.8 179.9,192.5 203.1,176.1 226.3,174.2 249.5,175.3 272.7,167.1 295.9,165.4 319.0,173.1 342.2,174.9 365.4,201.4 388.6,202.1 411.8,201.9 435.0,205.5 458.1,203.1 481.3,190.7 504.5,195.4 527.7,187.1 550.9,183.6 574.1,182.6 597.3,180.4 620.4,177.0 643.6,185.1 666.8,178.1 690.0,177.9"/>
+<line class="line limit" x1="702" y1="225.9" x2="712" y2="225.9"/>
+<text class="limit-text" x="718" y="229.9">無料枠 67</text>
+<line class="line limit" x1="702" y1="193.9" x2="712" y2="193.9"/>
+<text class="limit-text" x="718" y="197.9">5ドル 88</text>
+<line class="line limit" x1="702" y1="161.5" x2="712" y2="161.5"/>
+<text class="limit-text" x="718" y="165.5">10ドル 108</text>
+<line class="line limit" x1="702" y1="130.3" x2="712" y2="130.3"/>
+<text class="limit-text" x="718" y="134.3">15ドル（予算） 129</text>
+<line class="line other" x1="702" y1="209.9" x2="712" y2="209.9"/>
+<text class="label" x="718" y="213.9">当日</text>
+<line class="line s0" x1="702" y1="177.9" x2="712" y2="177.9"/>
+<text class="label" x="718" y="181.9">直近7日の平均</text>
+</svg>

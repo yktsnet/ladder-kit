@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-21",
+  "unreadable": [],
+  "repos": {
+    "api-server": [
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 7,
+        "minutes": 21
+      }
+    ],
+    "data-pipeline": [
+      {
+        "workflow": "nightly",
+        "event": "schedule",
+        "runs": 1,
+        "minutes": 15
+      },
+      {
+        "workflow": "issue-triage",
+        "event": "issues",
+        "runs": 4,
+        "minutes": 9
+      }
+    ],
+    "design-system": [
+      {
+        "workflow": "gitleaks",
+        "event": "pull_request",
+        "runs": 4,
+        "minutes": 4
+      },
+      {
+        "workflow": "Delete merged branch",
+        "event": "pull_request",
+        "runs": 2,
+        "minutes": 2
+      }
+    ],
+    "mobile-app": [
+      {
+        "workflow": "Build",
+        "event": "pull_request",
+        "runs": 2,
+        "minutes": 17
+      }
+    ],
+    "web-app": [
+      {
+        "workflow": "CI",
+        "event": "push",
+        "runs": 2,
+        "minutes": 8
+      },
+      {
+        "workflow": "e2e",
+        "event": "pull_request",
+        "runs": 1,
+        "minutes": 8
+      },
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 2,
+        "minutes": 7
+      }
+    ]
+  }
+}
