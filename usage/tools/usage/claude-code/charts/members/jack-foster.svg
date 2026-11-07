@@ -27,13 +27,13 @@ svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --
 <line class="grid" x1="56" y1="134.0" x2="696" y2="134.0"/>
 <text class="muted" x="48" y="138.0" text-anchor="end">0</text>
 <line class="grid" x1="56" y1="88.0" x2="696" y2="88.0"/>
-<text class="muted" x="48" y="92.0" text-anchor="end">25M</text>
+<text class="muted" x="48" y="92.0" text-anchor="end">20M</text>
 <line class="grid" x1="56" y1="42.0" x2="696" y2="42.0"/>
-<text class="muted" x="48" y="46.0" text-anchor="end">50M</text>
-<path class="s0" d="M65.0,134 v-80.4 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v80.4 z"/>
-<path class="s0" d="M225.0,134 v-39.3 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v39.3 z"/>
-<path class="s0" d="M385.0,134 v-74.5 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v74.5 z"/>
-<path class="s0" d="M545.0,134 v-43.2 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v43.2 z"/>
+<text class="muted" x="48" y="46.0" text-anchor="end">40M</text>
+<path class="s0" d="M65.0,134 v-52.7 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v52.7 z"/>
+<path class="s0" d="M225.0,134 v-87.8 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v87.8 z"/>
+<path class="s0" d="M385.0,134 v-69.3 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v69.3 z"/>
+<path class="s0" d="M545.0,134 v-62.1 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v62.1 z"/>
 <text class="muted" x="72.0" y="150" text-anchor="middle">10/12</text>
 <text class="muted" x="72.0" y="164" text-anchor="middle">月</text>
 <text class="muted" x="104.0" y="150" text-anchor="middle">13</text>
@@ -81,10 +81,10 @@ svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --
 <text class="muted" x="48" y="260.0" text-anchor="end">5分</text>
 <line class="grid" x1="56" y1="210.0" x2="696" y2="210.0"/>
 <text class="muted" x="48" y="214.0" text-anchor="end">10分</text>
-<path class="s0" d="M65.0,302 v-78.8 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v78.8 z"/>
-<path class="s0" d="M225.0,302 v-29.0 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v29.0 z"/>
-<path class="s0" d="M385.0,302 v-75.7 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v75.7 z"/>
-<path class="s0" d="M545.0,302 v-46.8 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v46.8 z"/>
+<path class="s0" d="M65.0,302 v-33.4 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v33.4 z"/>
+<path class="s0" d="M225.0,302 v-73.7 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v73.7 z"/>
+<path class="s0" d="M385.0,302 v-62.7 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v62.7 z"/>
+<path class="s0" d="M545.0,302 v-49.4 q0,-2.0 2.0,-2.0 h10.0 q2.0,0 2.0,2.0 v49.4 z"/>
 <text class="muted" x="72.0" y="318" text-anchor="middle">10/12</text>
 <text class="muted" x="72.0" y="332" text-anchor="middle">月</text>
 <text class="muted" x="104.0" y="318" text-anchor="middle">13</text>
@@ -136,12 +136,10 @@ svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --
 <text class="muted" x="48" y="428.0" text-anchor="end">2</text>
 <line class="grid" x1="56" y1="378.0" x2="696" y2="378.0"/>
 <text class="muted" x="48" y="382.0" text-anchor="end">3</text>
-<path class="s0" d="M59.0,470 v-90.0 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v90.0 z"/>
-<path class="s1" d="M73.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
-<path class="s0" d="M219.0,470 v-59.3 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v59.3 z"/>
-<path class="s0" d="M379.0,470 v-90.0 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v90.0 z"/>
-<path class="s1" d="M393.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
-<path class="s0" d="M539.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
+<path class="s0" d="M59.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
+<path class="s0" d="M219.0,470 v-90.0 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v90.0 z"/>
+<path class="s0" d="M379.0,470 v-28.7 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v28.7 z"/>
+<path class="s0" d="M539.0,470 v-59.3 q0,-2.0 2.0,-2.0 h8.0 q2.0,0 2.0,2.0 v59.3 z"/>
 <text class="muted" x="72.0" y="486" text-anchor="middle">10/12</text>
 <text class="muted" x="72.0" y="500" text-anchor="middle">月</text>
 <text class="muted" x="104.0" y="486" text-anchor="middle">13</text>

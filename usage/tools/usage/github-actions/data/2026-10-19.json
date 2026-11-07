@@ -6,8 +6,8 @@
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 2
+        "runs": 4,
+        "minutes": 8
       }
     ],
     "api-server": [
@@ -15,13 +15,7 @@
         "workflow": "CI",
         "event": "pull_request",
         "runs": 5,
-        "minutes": 15
-      },
-      {
-        "workflow": "Deploy",
-        "event": "push",
-        "runs": 1,
-        "minutes": 7
+        "minutes": 13
       }
     ],
     "data-pipeline": [
@@ -29,21 +23,21 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 21
-      },
-      {
-        "workflow": "issue-triage",
-        "event": "issues",
-        "runs": 3,
-        "minutes": 6
+        "minutes": 16
       }
     ],
     "design-system": [
       {
+        "workflow": "Delete merged branch",
+        "event": "pull_request",
+        "runs": 4,
+        "minutes": 4
+      },
+      {
         "workflow": "gitleaks",
         "event": "pull_request",
-        "runs": 3,
-        "minutes": 3
+        "runs": 4,
+        "minutes": 4
       }
     ],
     "docs-site": [
@@ -51,37 +45,35 @@
         "workflow": "Deploy",
         "event": "push",
         "runs": 2,
-        "minutes": 4
-      }
-    ],
-    "infra": [
-      {
-        "workflow": "terraform-plan",
-        "event": "pull_request",
-        "runs": 1,
-        "minutes": 3
+        "minutes": 5
       }
     ],
     "mobile-app": [
       {
         "workflow": "Build",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 7
+        "runs": 2,
+        "minutes": 15
       }
     ],
     "web-app": [
       {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 9,
+        "minutes": 38
+      },
+      {
         "workflow": "e2e",
         "event": "pull_request",
-        "runs": 3,
-        "minutes": 28
+        "runs": 2,
+        "minutes": 18
       },
       {
         "workflow": "CI",
-        "event": "pull_request",
-        "runs": 6,
-        "minutes": 27
+        "event": "push",
+        "runs": 3,
+        "minutes": 15
       }
     ]
   }

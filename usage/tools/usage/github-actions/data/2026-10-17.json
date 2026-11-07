@@ -7,7 +7,7 @@
         "workflow": "Deploy",
         "event": "push",
         "runs": 1,
-        "minutes": 5
+        "minutes": 6
       },
       {
         "workflow": "CI",
@@ -21,15 +21,7 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 20
-      }
-    ],
-    "design-system": [
-      {
-        "workflow": "gitleaks",
-        "event": "pull_request",
-        "runs": 1,
-        "minutes": 1
+        "minutes": 23
       }
     ],
     "docs-site": [
@@ -40,12 +32,20 @@
         "minutes": 2
       }
     ],
-    "web-app": [
+    "infra": [
       {
-        "workflow": "CI",
+        "workflow": "terraform-plan",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 4
+        "minutes": 3
+      }
+    ],
+    "web-app": [
+      {
+        "workflow": "e2e",
+        "event": "pull_request",
+        "runs": 1,
+        "minutes": 10
       },
       {
         "workflow": "CI",

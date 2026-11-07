@@ -2,26 +2,18 @@
   "date": "2026-10-03",
   "unreadable": [],
   "repos": {
-    "admin-console": [
-      {
-        "workflow": "CI",
-        "event": "pull_request",
-        "runs": 1,
-        "minutes": 2
-      }
-    ],
     "api-server": [
       {
         "workflow": "Deploy",
         "event": "push",
         "runs": 1,
-        "minutes": 6
+        "minutes": 5
       },
       {
         "workflow": "CI",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 4
+        "minutes": 3
       }
     ],
     "data-pipeline": [
@@ -29,7 +21,7 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 15
+        "minutes": 22
       }
     ],
     "design-system": [
@@ -38,28 +30,14 @@
         "event": "pull_request",
         "runs": 1,
         "minutes": 1
-      },
-      {
-        "workflow": "gitleaks",
-        "event": "pull_request",
-        "runs": 1,
-        "minutes": 1
       }
     ],
-    "docs-site": [
+    "mobile-app": [
       {
-        "workflow": "Deploy",
-        "event": "push",
-        "runs": 1,
-        "minutes": 2
-      }
-    ],
-    "infra": [
-      {
-        "workflow": "terraform-plan",
+        "workflow": "Build",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 3
+        "minutes": 7
       }
     ],
     "web-app": [
@@ -68,12 +46,6 @@
         "event": "pull_request",
         "runs": 1,
         "minutes": 8
-      },
-      {
-        "workflow": "CI",
-        "event": "pull_request",
-        "runs": 1,
-        "minutes": 5
       }
     ]
   }

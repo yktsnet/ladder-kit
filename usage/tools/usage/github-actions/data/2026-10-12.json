@@ -6,16 +6,16 @@
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 2,
-        "minutes": 4
+        "runs": 4,
+        "minutes": 8
       }
     ],
     "api-server": [
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 6,
-        "minutes": 18
+        "runs": 8,
+        "minutes": 24
       },
       {
         "workflow": "Deploy",
@@ -29,7 +29,7 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 16
+        "minutes": 20
       }
     ],
     "design-system": [
@@ -46,20 +46,48 @@
         "minutes": 3
       }
     ],
+    "docs-site": [
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 2,
+        "minutes": 4
+      }
+    ],
+    "infra": [
+      {
+        "workflow": "terraform-plan",
+        "event": "pull_request",
+        "runs": 2,
+        "minutes": 6
+      }
+    ],
     "mobile-app": [
       {
         "workflow": "Build",
         "event": "pull_request",
-        "runs": 2,
-        "minutes": 15
+        "runs": 1,
+        "minutes": 6
       }
     ],
     "web-app": [
       {
         "workflow": "e2e",
         "event": "pull_request",
-        "runs": 2,
-        "minutes": 19
+        "runs": 5,
+        "minutes": 47
+      },
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 12,
+        "minutes": 45
+      },
+      {
+        "workflow": "CI",
+        "event": "push",
+        "runs": 1,
+        "minutes": 5
       }
     ]
   }

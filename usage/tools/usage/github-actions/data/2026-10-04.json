@@ -2,12 +2,12 @@
   "date": "2026-10-04",
   "unreadable": [],
   "repos": {
-    "api-server": [
+    "admin-console": [
       {
-        "workflow": "Deploy",
-        "event": "push",
+        "workflow": "CI",
+        "event": "pull_request",
         "runs": 1,
-        "minutes": 5
+        "minutes": 2
       }
     ],
     "data-pipeline": [
@@ -15,7 +15,7 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 16
+        "minutes": 22
       }
     ],
     "design-system": [
@@ -31,25 +31,13 @@
         "workflow": "Build",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 9
+        "minutes": 7
       }
     ],
     "web-app": [
       {
-        "workflow": "e2e",
-        "event": "pull_request",
-        "runs": 1,
-        "minutes": 7
-      },
-      {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 5
-      },
-      {
-        "workflow": "CI",
-        "event": "push",
         "runs": 1,
         "minutes": 5
       }

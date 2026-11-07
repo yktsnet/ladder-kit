@@ -15,13 +15,13 @@
         "workflow": "Deploy",
         "event": "push",
         "runs": 1,
-        "minutes": 8
+        "minutes": 5
       },
       {
         "workflow": "CI",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 2
+        "minutes": 4
       }
     ],
     "data-pipeline": [
@@ -29,7 +29,7 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 19
+        "minutes": 23
       }
     ],
     "design-system": [
@@ -46,12 +46,12 @@
         "minutes": 1
       }
     ],
-    "infra": [
+    "docs-site": [
       {
-        "workflow": "terraform-plan",
-        "event": "pull_request",
+        "workflow": "Deploy",
+        "event": "push",
         "runs": 1,
-        "minutes": 4
+        "minutes": 2
       }
     ],
     "mobile-app": [
@@ -59,15 +59,7 @@
         "workflow": "Build",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 9
-      }
-    ],
-    "web-app": [
-      {
-        "workflow": "CI",
-        "event": "pull_request",
-        "runs": 1,
-        "minutes": 4
+        "minutes": 7
       }
     ]
   }

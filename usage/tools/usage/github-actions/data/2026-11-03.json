@@ -6,16 +6,22 @@
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 2
+        "runs": 4,
+        "minutes": 8
       }
     ],
     "api-server": [
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 4,
-        "minutes": 11
+        "runs": 5,
+        "minutes": 15
+      },
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 1,
+        "minutes": 7
       }
     ],
     "data-pipeline": [
@@ -23,29 +29,31 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 14
+        "minutes": 23
       }
     ],
     "design-system": [
       {
         "workflow": "Delete merged branch",
         "event": "pull_request",
-        "runs": 3,
-        "minutes": 3
-      },
-      {
-        "workflow": "gitleaks",
-        "event": "pull_request",
-        "runs": 2,
-        "minutes": 2
+        "runs": 1,
+        "minutes": 1
       }
     ],
     "docs-site": [
       {
         "workflow": "Deploy",
         "event": "push",
+        "runs": 1,
+        "minutes": 2
+      }
+    ],
+    "infra": [
+      {
+        "workflow": "terraform-plan",
+        "event": "pull_request",
         "runs": 2,
-        "minutes": 4
+        "minutes": 7
       }
     ],
     "mobile-app": [
@@ -53,27 +61,27 @@
         "workflow": "Build",
         "event": "pull_request",
         "runs": 2,
-        "minutes": 13
+        "minutes": 14
       }
     ],
     "web-app": [
       {
-        "workflow": "CI",
-        "event": "pull_request",
-        "runs": 12,
-        "minutes": 53
-      },
-      {
         "workflow": "e2e",
         "event": "pull_request",
-        "runs": 2,
-        "minutes": 18
+        "runs": 4,
+        "minutes": 42
+      },
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 3,
+        "minutes": 12
       },
       {
         "workflow": "CI",
         "event": "push",
-        "runs": 4,
-        "minutes": 17
+        "runs": 1,
+        "minutes": 4
       }
     ]
   }

@@ -6,22 +6,22 @@
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 2
+        "runs": 3,
+        "minutes": 6
       }
     ],
     "api-server": [
       {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 8,
+        "minutes": 23
+      },
+      {
         "workflow": "Deploy",
         "event": "push",
         "runs": 2,
-        "minutes": 12
-      },
-      {
-        "workflow": "CI",
-        "event": "pull_request",
-        "runs": 3,
-        "minutes": 10
+        "minutes": 13
       }
     ],
     "data-pipeline": [
@@ -29,16 +29,10 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 15
+        "minutes": 23
       }
     ],
     "design-system": [
-      {
-        "workflow": "gitleaks",
-        "event": "pull_request",
-        "runs": 3,
-        "minutes": 3
-      },
       {
         "workflow": "Delete merged branch",
         "event": "pull_request",
@@ -46,48 +40,34 @@
         "minutes": 1
       }
     ],
-    "docs-site": [
-      {
-        "workflow": "Deploy",
-        "event": "push",
-        "runs": 2,
-        "minutes": 4
-      }
-    ],
     "infra": [
       {
         "workflow": "terraform-plan",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 3
+        "runs": 2,
+        "minutes": 6
       }
     ],
     "mobile-app": [
       {
         "workflow": "Build",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 9
+        "runs": 2,
+        "minutes": 15
       }
     ],
     "web-app": [
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 11,
-        "minutes": 46
-      },
-      {
-        "workflow": "CI",
-        "event": "push",
-        "runs": 4,
-        "minutes": 17
+        "runs": 5,
+        "minutes": 19
       },
       {
         "workflow": "e2e",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 10
+        "minutes": 11
       }
     ]
   }

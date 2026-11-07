@@ -6,22 +6,22 @@
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 2
+        "runs": 3,
+        "minutes": 6
       }
     ],
     "api-server": [
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 5,
-        "minutes": 16
+        "runs": 4,
+        "minutes": 13
       },
       {
         "workflow": "Deploy",
         "event": "push",
         "runs": 1,
-        "minutes": 7
+        "minutes": 6
       }
     ],
     "data-pipeline": [
@@ -29,21 +29,29 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 16
+        "minutes": 15
       }
     ],
     "design-system": [
       {
         "workflow": "gitleaks",
         "event": "pull_request",
-        "runs": 4,
-        "minutes": 4
+        "runs": 3,
+        "minutes": 3
       },
       {
         "workflow": "Delete merged branch",
         "event": "pull_request",
-        "runs": 3,
-        "minutes": 3
+        "runs": 1,
+        "minutes": 1
+      }
+    ],
+    "docs-site": [
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 2,
+        "minutes": 4
       }
     ],
     "infra": [
@@ -51,29 +59,35 @@
         "workflow": "terraform-plan",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 4
+        "minutes": 3
       }
     ],
     "mobile-app": [
       {
         "workflow": "Build",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 8
+        "runs": 2,
+        "minutes": 15
       }
     ],
     "web-app": [
       {
+        "workflow": "e2e",
+        "event": "pull_request",
+        "runs": 6,
+        "minutes": 59
+      },
+      {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 11,
-        "minutes": 41
+        "runs": 8,
+        "minutes": 33
       },
       {
         "workflow": "CI",
         "event": "push",
-        "runs": 4,
-        "minutes": 16
+        "runs": 3,
+        "minutes": 13
       }
     ]
   }

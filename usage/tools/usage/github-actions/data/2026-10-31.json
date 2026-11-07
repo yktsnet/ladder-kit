@@ -4,12 +4,6 @@
   "repos": {
     "api-server": [
       {
-        "workflow": "Deploy",
-        "event": "push",
-        "runs": 1,
-        "minutes": 7
-      },
-      {
         "workflow": "CI",
         "event": "pull_request",
         "runs": 1,
@@ -21,7 +15,7 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 23
+        "minutes": 22
       }
     ],
     "design-system": [
@@ -30,14 +24,6 @@
         "event": "pull_request",
         "runs": 1,
         "minutes": 1
-      }
-    ],
-    "docs-site": [
-      {
-        "workflow": "Deploy",
-        "event": "push",
-        "runs": 1,
-        "minutes": 3
       }
     ],
     "infra": [
@@ -53,10 +39,22 @@
         "workflow": "Build",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 7
+        "minutes": 8
       }
     ],
     "web-app": [
+      {
+        "workflow": "e2e",
+        "event": "pull_request",
+        "runs": 1,
+        "minutes": 12
+      },
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 1,
+        "minutes": 5
+      },
       {
         "workflow": "CI",
         "event": "push",

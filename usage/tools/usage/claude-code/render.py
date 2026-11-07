@@ -20,6 +20,7 @@ README = ROOT / "README.md"
 SEATS = ROOT / "seats.json"
 ACCOUNTS = ROOT / "github.json"
 MEMBER_DAYS = 28
+TOP_SKILLS = 3
 # 利用上限は7日ごとに戻るので、seat は7日ごとの費用で見る。1週だけ休んだ人を誤って下げないよう、2週のうち多い方で決める
 SEAT_WEEKS = 2
 # 2週の平日のうち使った日が2日以下（週1日以下）なら、seat が要らない
@@ -292,34 +293,48 @@ def skills_table(days: list[dt.date], by_date: dict[dt.date, dict], email: str) 
     return "\n".join(lines)
 
 
-def amount_table(stats: dict[str, dict]) -> str:
+def standard_table(stats: dict[str, dict]) -> str:
     lines = [
-        "| メンバー | 利用時間 | トークン量 | commit | PR | 追加した行 | 削除した行 | 立てた Issue | 閉じた Issue |",
-        "|---|--:|--:|--:|--:|--:|--:|--:|--:|",
+        "| メンバー | スキルの回数 | よく使ったスキル |",
+        "|---|--:|---|",
+    ]
+    for m, u in stats.items():
+        skills = u["skills"] or {}
+        whole = sum(skills.values())
+        top = sorted(skills.items(), key=lambda kv: -kv[1])[:TOP_SKILLS]
+        names = "、".join(f"`{s}` {n / whole:.0%}" for s, n in top) if whole else "-"
+        lines.append(f"| [{name(m)}](members/{name(m)}.md) | {skill_total(u)} | {names} |")
+    return "\n".join(lines)
+
+
+def work_table(stats: dict[str, dict]) -> str:
+    lines = [
+        "| メンバー | commit | PR | 追加した行 | 削除した行 | 立てた Issue | 閉じた Issue |",
+        "|---|--:|--:|--:|--:|--:|--:|",
     ]
     for m, u in stats.items():
         lines.append(
-            f"| [{name(m)}](members/{name(m)}.md) | {minutes(u['active_seconds'])} "
-            f"| {compact(u['tokens'])} | {u['commits']} | {u['pull_requests']} "
+            f"| {name(m)} | {u['commits']} | {u['pull_requests']} "
             f"| {u['lines_added']} | {u['lines_removed']} "
             f"| {issue_cell(u['issues'], 0)} | {issue_cell(u['issues'], 1)} |"
         )
     return "\n".join(lines)
 
 
-def usage_table(stats: dict[str, dict]) -> str:
+def input_table(stats: dict[str, dict]) -> str:
     lines = [
-        "| メンバー | スキル | サブエージェントに任せた割合 | Effort | モデル | 1会話あたりのトークン量 |",
-        "|---|--:|--:|---|---|--:|",
+        "| メンバー | 利用時間 | トークン量 | 1会話あたりのトークン量 | サブエージェントに任せた割合 | Effort | モデル |",
+        "|---|--:|--:|--:|--:|---|---|",
     ]
     for m, u in stats.items():
-        if not u["detailed_days"]:
-            continue
+        # 内訳は後から取り始めたので、内訳の無い人は切り替えの列を空ける
+        detail = (f"{ratio(*u['subagent'])} | {kinds(u['efforts'])} | {kinds(u['families'])}"
+                  if u["detailed_days"] else "- | - | -")
         lines.append(
-            f"| {name(m)} | {skill_total(u)} | {ratio(*u['subagent'])} | {kinds(u['efforts'])} "
-            f"| {kinds(u['families'])} | {compact(u['tokens'] / u['sessions']) if u['sessions'] else '-'} |"
+            f"| {name(m)} | {minutes(u['active_seconds'])} | {compact(u['tokens'])} "
+            f"| {compact(u['tokens'] / u['sessions']) if u['sessions'] else '-'} | {detail} |"
         )
-    return "\n".join(lines) if len(lines) > 2 else "内訳のデータがまだ無い。"
+    return "\n".join(lines)
 
 
 def seat_table(by_date: dict[dt.date, dict], members: list[str], seats: dict, last: dt.date, full: bool) -> str:
@@ -504,25 +519,27 @@ def main() -> None:
         "",
         f"図と表はどれも {span[0]} 〜 {span[-1]} の平日の分で、期間のトークン量の多い順に並べる。",
         "",
-        "### 日ごとのトークン量",
+        "### 標準化されたやり方",
         "",
-        "![メンバー別の日ごとのトークン量](charts/team-daily.svg)",
+        "配られたスキルを回しているか。名前を押すと、スキルごとの回数と割合が個人のページに出る。",
         "",
-        "### 日ごとの commit",
+        standard_table(stats),
         "",
-        "上のトークン量と同じ日付で並べる。トークン量が増えた時期に commit も増えているかを見比べる。",
-        "",
-        "![メンバー別の日ごとの commit](charts/team-commits.svg)",
-        "",
-        "### 量と成果",
+        "### 作業の量",
         "",
         "どれも期間の合計である。",
         "",
-        amount_table(stats),
+        "![メンバー別の日ごとの commit](charts/team-commits.svg)",
         "",
-        "### 使い方",
+        work_table(stats),
         "",
-        usage_table(stats),
+        "### 投入の量",
+        "",
+        "使う量と、使い方の列を並べる。",
+        "",
+        "![メンバー別の日ごとのトークン量](charts/team-daily.svg)",
+        "",
+        input_table(stats),
         "",
         "### seat",
         "",

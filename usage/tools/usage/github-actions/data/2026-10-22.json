@@ -2,12 +2,26 @@
   "date": "2026-10-22",
   "unreadable": [],
   "repos": {
-    "api-server": [
+    "admin-console": [
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 7,
-        "minutes": 23
+        "runs": 2,
+        "minutes": 4
+      }
+    ],
+    "api-server": [
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 1,
+        "minutes": 6
+      },
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 2,
+        "minutes": 5
       }
     ],
     "data-pipeline": [
@@ -15,29 +29,35 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 20
+        "minutes": 17
       },
       {
         "workflow": "issue-triage",
         "event": "issues",
-        "runs": 3,
-        "minutes": 6
+        "runs": 1,
+        "minutes": 2
       }
     ],
     "design-system": [
       {
         "workflow": "gitleaks",
         "event": "pull_request",
-        "runs": 3,
-        "minutes": 3
-      }
-    ],
-    "infra": [
+        "runs": 4,
+        "minutes": 4
+      },
       {
-        "workflow": "terraform-plan",
+        "workflow": "Delete merged branch",
         "event": "pull_request",
         "runs": 2,
-        "minutes": 7
+        "minutes": 2
+      }
+    ],
+    "docs-site": [
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 2,
+        "minutes": 4
       }
     ],
     "mobile-app": [
@@ -45,27 +65,27 @@
         "workflow": "Build",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 9
+        "minutes": 8
       }
     ],
     "web-app": [
       {
         "workflow": "CI",
         "event": "pull_request",
-        "runs": 9,
-        "minutes": 39
+        "runs": 11,
+        "minutes": 45
       },
       {
         "workflow": "e2e",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 9
+        "runs": 4,
+        "minutes": 39
       },
       {
         "workflow": "CI",
         "event": "push",
-        "runs": 2,
-        "minutes": 8
+        "runs": 1,
+        "minutes": 5
       }
     ]
   }

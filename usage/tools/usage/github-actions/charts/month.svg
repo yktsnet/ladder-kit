@@ -44,14 +44,14 @@ svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --
 <line class="limit" x1="64" y1="166.5" x2="690" y2="166.5"/>
 <line class="limit" x1="64" y1="129.0" x2="690" y2="129.0"/>
 <line class="limit" x1="64" y1="91.5" x2="690" y2="91.5"/>
-<polyline class="line s0 dash" style="fill: none" points="171.9,286.2 690.0,135.0"/>
-<polyline class="line s0 " style="fill: none" points="64.0,320.9 85.6,314.0 107.2,305.8 128.8,299.1 150.3,291.0 171.9,286.2"/>
-<circle class="dot s0" cx="64.0" cy="320.9" r="3"/>
-<circle class="dot s0" cx="85.6" cy="314.0" r="3"/>
+<polyline class="line s0 dash" style="fill: none" points="171.9,280.3 690.0,105.3"/>
+<polyline class="line s0 " style="fill: none" points="64.0,321.5 85.6,313.9 107.2,305.8 128.8,298.7 150.3,290.0 171.9,280.3"/>
+<circle class="dot s0" cx="64.0" cy="321.5" r="3"/>
+<circle class="dot s0" cx="85.6" cy="313.9" r="3"/>
 <circle class="dot s0" cx="107.2" cy="305.8" r="3"/>
-<circle class="dot s0" cx="128.8" cy="299.1" r="3"/>
-<circle class="dot s0" cx="150.3" cy="291.0" r="3"/>
-<circle class="dot s0" cx="171.9" cy="286.2" r="3"/>
+<circle class="dot s0" cx="128.8" cy="298.7" r="3"/>
+<circle class="dot s0" cx="150.3" cy="290.0" r="3"/>
+<circle class="dot s0" cx="171.9" cy="280.3" r="3"/>
 <line class="line limit" x1="702" y1="204.0" x2="712" y2="204.0"/>
 <text class="limit-text" x="718" y="208.0">無料枠 2,000</text>
 <line class="line limit" x1="702" y1="166.5" x2="712" y2="166.5"/>
@@ -60,6 +60,6 @@ svg { --surface: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --grid: #e4e3df; --
 <text class="limit-text" x="718" y="133.0">10ドル 3,250</text>
 <line class="line limit" x1="702" y1="91.5" x2="712" y2="91.5"/>
 <text class="limit-text" x="718" y="95.5">15ドル（予算） 3,875</text>
-<line class="line s0" x1="702" y1="286.2" x2="712" y2="286.2"/>
-<text class="label" x="718" y="290.2">累計</text>
+<line class="line s0" x1="702" y1="280.3" x2="712" y2="280.3"/>
+<text class="label" x="718" y="284.3">累計</text>
 </svg>

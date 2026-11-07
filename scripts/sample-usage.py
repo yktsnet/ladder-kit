@@ -17,22 +17,29 @@ DOMAIN = "example.com"
 # 1日に読むトークンのほとんどはキャッシュの読み込みで単価が低いので、費用1ドルあたりのトークンを大きく置く
 TOKENS_PER_USD = 1_600_000
 
-# (名前, GitHub, seat, 平日1日の費用の目安, 使う日の割合, 主な Effort, 主なモデル, スキルを使う度合い, Issue を立てる度合い)
+# README.md の「あるべき姿」と崩れ方の型が見えるように、人ごとの傾向を置く。
+# (名前, GitHub, seat, 平日1日の費用の目安, 使う日の割合, 主な Effort, 主なモデル,
+#  使った日1日のスキルの回数, Issue を立てる度合い, commit のうち PR になる割合)
 MEMBERS = [
-    ("alice-walker", "alicew", "premium", 260, 0.95, ["medium", "high", "xhigh", "low"], ["opus 5.5", "sonnet 5.5", "haiku 5.5"], 2.0, 8),
-    ("ben-carter", "bencarter", "premium", 240, 0.95, ["high", "medium", "low"], ["opus 5.5", "sonnet 5.5"], 3.0, 0),
-    ("chloe-evans", "chloe-e", "premium", 95, 0.9, ["high"], ["opus 5.5"], 0.3, 1),
-    ("daniel-brooks", "dbrooks", "premium", 80, 0.9, ["medium"], ["opus 5.5", "haiku 4.5"], 0.6, 0),
-    ("emma-hughes", "emmah", "premium", 85, 0.85, ["medium"], ["opus 5.5", "sonnet 5.5", "haiku 5.5"], 1.5, 4),
-    ("felix-grant", "fgrant", "premium", 75, 0.9, ["medium"], ["opus 5.5", "opus 4.8"], 0.3, 0),
-    ("grace-turner", "gturner", "standard", 30, 0.8, ["medium", "high"], ["opus 5.5"], 0.4, 1),
-    ("henry-ward", None, "premium", 140, 0.9, ["high", "medium"], ["opus 5.5", "sonnet 5.5"], 1.0, 0),
-    ("isla-morgan", "islam", "standard", 18, 0.7, ["low", "medium"], ["sonnet 5.5"], 0.0, 2),
-    ("jack-foster", "jfoster", "standard", 25, 0.1, ["medium"], ["opus 5.5"], 0.0, 0),
+    # あるべき姿：型に乗り、量も足りている
+    ("alice-walker", "alicew", "premium", 260, 0.95, ["medium", "high", "xhigh", "low"], ["opus 5.5", "sonnet 5.5", "haiku 5.5"], 2.5, 8, 0.45),
+    ("emma-hughes", "emmah", "premium", 110, 0.95, ["medium", "high", "low"], ["opus 5.5", "sonnet 5.5"], 2.0, 4, 0.4),
+    # 量は多いが型に乗っていない
+    ("ben-carter", "bencarter", "premium", 240, 0.95, ["high"], ["opus 5.5"], 0.3, 0, 0.02),
+    ("henry-ward", None, "premium", 150, 0.9, ["high", "medium"], ["opus 5.5", "sonnet 5.5"], 0.5, 0, 0.1),
+    ("chloe-evans", "chloe-e", "premium", 95, 0.9, ["high"], ["opus 5.5"], 0.3, 1, 0.1),
+    ("felix-grant", "fgrant", "premium", 90, 0.9, ["medium"], ["opus 5.5"], 0.15, 0, 0.05),
+    # 中ほど
+    ("daniel-brooks", "dbrooks", "premium", 80, 0.9, ["medium", "high"], ["opus 5.5", "haiku 4.5"], 1.0, 2, 0.3),
+    # 型に乗っているが量が少ない
+    ("grace-turner", "gturner", "standard", 25, 0.85, ["medium", "high"], ["opus 5.5", "sonnet 5.5"], 1.5, 3, 0.4),
+    ("isla-morgan", "islam", "standard", 15, 0.75, ["low", "medium"], ["sonnet 5.5"], 1.2, 2, 0.4),
+    # どちらも少ない
+    ("jack-foster", "jfoster", "standard", 25, 0.1, ["medium"], ["opus 5.5"], 0.0, 0, 0.1),
 ]
 # 人ごとの (サブエージェントに任せる割合, 1会話あたりの費用)。会話を長く続ける人ほど1会話の費用が大きい
 STYLE = {
-    "alice-walker": (0.35, 6), "ben-carter": (0.5, 7), "chloe-evans": (0.1, 30), "daniel-brooks": (0.25, 6),
+    "alice-walker": (0.35, 6), "ben-carter": (0.1, 7), "chloe-evans": (0.1, 30), "daniel-brooks": (0.25, 6),
     "emma-hughes": (0.3, 5), "felix-grant": (0.05, 18), "grace-turner": (0.2, 3), "henry-ward": (0.3, 8),
     "isla-morgan": (0.15, 2), "jack-foster": (0.2, 4),
 }
@@ -40,7 +47,11 @@ STYLE = {
 RARE = "jack-foster"
 # 名簿にあるが記録が届いていない人
 SILENT = ("kate-hill", "premium")
-SKILLS = ["work", "hand-off", "jp-writing", "local-issue", "grasp", "walkthrough", "daily-report", "frontend-design"]
+# sdlc-kit の flow-team と doc-style などのスキルを、使われる重みで持つ
+SKILLS = {"issue-work": 5, "issue-draft": 2, "rework-review": 2, "jp-writing": 1, "md-writing": 1,
+          "daily-report": 1, "guarantee-audit": 0.5, "grasp": 0.3}
+# alice-walker が作り、ほかのメンバーも使っている自作のスキル
+CUSTOM_SKILL = ("api-scaffold", {"alice-walker": 2, "emma-hughes": 1, "daniel-brooks": 1, "grace-turner": 1})
 MODEL_IDS = {
     "opus 5.5": "claude-opus-5-5", "sonnet 5.5": "claude-sonnet-5-5", "haiku 5.5": "claude-haiku-5-5",
     "haiku 4.5": "claude-haiku-4-5-20251001", "opus 4.8": "claude-opus-4-8",
@@ -71,7 +82,7 @@ def weekdays(first: dt.date, last: dt.date) -> list[dt.date]:
 
 
 def member_day(rng: random.Random, m: tuple, d: dt.date) -> dict | None:
-    name, _, _, usd, rate, efforts, models, skill_rate, _ = m
+    name, _, _, usd, rate, efforts, models, skill_rate, _, pr_ratio = m
     if (d.weekday() != 0) if name == RARE else rng.random() > rate:
         return None
     sub_share, usd_per_session = STYLE[name]
@@ -93,15 +104,17 @@ def member_day(rng: random.Random, m: tuple, d: dt.date) -> dict | None:
             model = models[-1] if qs == "auxiliary" else models[0]
             cost_by_model.append({"model": MODEL_IDS[model], "effort": "none" if qs == "auxiliary" else efforts[0],
                                   "query_source": qs, "cost_usd": round(cost * share, 4)})
-    skills = {}
-    for s in SKILLS:
-        n = round(rng.random() * skill_rate * (2 if s in ("work", "hand-off") else 1))
-        if n:
-            skills[s] = n
+    weights = dict(SKILLS)
+    if name in CUSTOM_SKILL[1]:
+        weights[CUSTOM_SKILL[0]] = CUSTOM_SKILL[1][name]
+    skills: dict[str, int] = {}
+    for _ in range(max(0, round(rng.gauss(skill_rate, skill_rate * 0.6)))):
+        s = rng.choices(list(weights), weights=list(weights.values()))[0]
+        skills[s] = skills.get(s, 0) + 1
     eps = {"cli": round(cli * 0.7), "claude-vscode": round(cli * 0.3)} if name != "isla-morgan" else {"claude-vscode": cli}
     return {
         "tokens": tokens, "active_seconds": cli, "sessions": sessions, "cost_usd": cost,
-        "commits": commits, "pull_requests": rng.randint(0, max(0, commits // 3)),
+        "commits": commits, "pull_requests": sum(rng.random() < pr_ratio for _ in range(commits)),
         "lines_added": commits * rng.randint(20, 160), "lines_removed": commits * rng.randint(2, 20),
         "entrypoints": eps,
         "active_by_type": {"cli": cli, "user": round(cli * 0.6)},

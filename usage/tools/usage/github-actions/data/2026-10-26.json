@@ -2,12 +2,26 @@
   "date": "2026-10-26",
   "unreadable": [],
   "repos": {
+    "admin-console": [
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 4,
+        "minutes": 8
+      }
+    ],
     "api-server": [
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 8,
+        "minutes": 27
+      },
       {
         "workflow": "Deploy",
         "event": "push",
         "runs": 2,
-        "minutes": 11
+        "minutes": 16
       }
     ],
     "data-pipeline": [
@@ -15,7 +29,7 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 19
+        "minutes": 16
       },
       {
         "workflow": "issue-triage",
@@ -26,24 +40,24 @@
     ],
     "design-system": [
       {
-        "workflow": "gitleaks",
-        "event": "pull_request",
-        "runs": 4,
-        "minutes": 4
-      },
-      {
         "workflow": "Delete merged branch",
         "event": "pull_request",
-        "runs": 3,
-        "minutes": 3
+        "runs": 1,
+        "minutes": 1
+      },
+      {
+        "workflow": "gitleaks",
+        "event": "pull_request",
+        "runs": 1,
+        "minutes": 1
       }
     ],
     "docs-site": [
       {
         "workflow": "Deploy",
         "event": "push",
-        "runs": 1,
-        "minutes": 2
+        "runs": 2,
+        "minutes": 4
       }
     ],
     "infra": [
@@ -59,21 +73,21 @@
         "workflow": "Build",
         "event": "pull_request",
         "runs": 2,
-        "minutes": 15
+        "minutes": 16
       }
     ],
     "web-app": [
       {
-        "workflow": "e2e",
+        "workflow": "CI",
         "event": "pull_request",
-        "runs": 3,
-        "minutes": 28
+        "runs": 9,
+        "minutes": 40
       },
       {
         "workflow": "CI",
-        "event": "pull_request",
-        "runs": 4,
-        "minutes": 17
+        "event": "push",
+        "runs": 2,
+        "minutes": 8
       }
     ]
   }

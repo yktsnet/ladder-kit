@@ -2,34 +2,36 @@
   "date": "2026-10-25",
   "unreadable": [],
   "repos": {
+    "api-server": [
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 1,
+        "minutes": 7
+      }
+    ],
     "data-pipeline": [
       {
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 16
-      },
-      {
-        "workflow": "issue-triage",
-        "event": "issues",
-        "runs": 1,
-        "minutes": 2
+        "minutes": 17
       }
     ],
     "design-system": [
       {
-        "workflow": "gitleaks",
+        "workflow": "Delete merged branch",
         "event": "pull_request",
         "runs": 1,
         "minutes": 1
       }
     ],
-    "infra": [
+    "docs-site": [
       {
-        "workflow": "terraform-plan",
-        "event": "pull_request",
+        "workflow": "Deploy",
+        "event": "push",
         "runs": 1,
-        "minutes": 3
+        "minutes": 2
       }
     ],
     "mobile-app": [
@@ -42,16 +44,10 @@
     ],
     "web-app": [
       {
-        "workflow": "e2e",
-        "event": "pull_request",
-        "runs": 1,
-        "minutes": 11
-      },
-      {
         "workflow": "CI",
         "event": "pull_request",
         "runs": 1,
-        "minutes": 5
+        "minutes": 4
       }
     ]
   }

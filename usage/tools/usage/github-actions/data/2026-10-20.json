@@ -2,12 +2,20 @@
   "date": "2026-10-20",
   "unreadable": [],
   "repos": {
-    "api-server": [
+    "admin-console": [
       {
         "workflow": "CI",
         "event": "pull_request",
         "runs": 3,
-        "minutes": 10
+        "minutes": 7
+      }
+    ],
+    "api-server": [
+      {
+        "workflow": "CI",
+        "event": "pull_request",
+        "runs": 8,
+        "minutes": 25
       }
     ],
     "data-pipeline": [
@@ -15,49 +23,71 @@
         "workflow": "nightly",
         "event": "schedule",
         "runs": 1,
-        "minutes": 22
+        "minutes": 20
       },
       {
         "workflow": "issue-triage",
         "event": "issues",
-        "runs": 4,
-        "minutes": 8
+        "runs": 2,
+        "minutes": 5
       }
     ],
     "design-system": [
       {
         "workflow": "Delete merged branch",
         "event": "pull_request",
+        "runs": 4,
+        "minutes": 4
+      },
+      {
+        "workflow": "gitleaks",
+        "event": "pull_request",
         "runs": 3,
         "minutes": 3
+      }
+    ],
+    "docs-site": [
+      {
+        "workflow": "Deploy",
+        "event": "push",
+        "runs": 2,
+        "minutes": 5
       }
     ],
     "infra": [
       {
         "workflow": "terraform-plan",
         "event": "pull_request",
-        "runs": 1,
-        "minutes": 4
+        "runs": 2,
+        "minutes": 6
+      }
+    ],
+    "mobile-app": [
+      {
+        "workflow": "Build",
+        "event": "pull_request",
+        "runs": 2,
+        "minutes": 14
       }
     ],
     "web-app": [
       {
+        "workflow": "e2e",
+        "event": "pull_request",
+        "runs": 5,
+        "minutes": 48
+      },
+      {
         "workflow": "CI",
         "event": "pull_request",
         "runs": 7,
-        "minutes": 31
-      },
-      {
-        "workflow": "e2e",
-        "event": "pull_request",
-        "runs": 3,
-        "minutes": 27
+        "minutes": 28
       },
       {
         "workflow": "CI",
         "event": "push",
-        "runs": 1,
-        "minutes": 5
+        "runs": 2,
+        "minutes": 9
       }
     ]
   }
