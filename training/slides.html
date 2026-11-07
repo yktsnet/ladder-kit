@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<title>AI時代に必要とされる社員を、会社で育てる</title>
+<style>
+@page { size: A4 landscape; margin: 0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+:root{
+  --navy:#1B2A5E;
+  --teal:#1C6E8C;
+  --gold:#B8860B;
+  --crim:#9B2C2C;
+  --grey:#6B7280; --light:#EEF2F8; --row:#F5F7FB; --bordr:#D5DAE5;
+}
+/* ブラウザ既定では背景色を印刷しない。印刷ダイアログ側の指定と併せて要る */
+html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+body{
+  font-family:"Noto Sans CJK JP","Noto Sans JP","Yu Gothic UI","Hiragino Sans","Meiryo",sans-serif;
+  color:#1A1A1A; background:#8A8F98;
+}
+.page{
+  width:297mm; height:210mm; padding:15mm 17mm 11mm; background:#fff;
+  display:flex; flex-direction:column; page-break-after:always; overflow:hidden; position:relative;
+}
+.page:last-child{ page-break-after:auto; }
+@media screen{
+  body{ padding:14px 0; }
+  .page{ margin:0 auto 18px; box-shadow:0 2px 14px rgba(0,0,0,.35); }
+}
+.pno{ position:absolute; right:17mm; bottom:7mm; font-size:9pt; color:var(--grey); }
+.sec{ font-size:10.5pt; font-weight:700; color:var(--teal); letter-spacing:.05em; margin-bottom:2mm; }
+h1{ font-size:24pt; font-weight:700; color:var(--navy); line-height:1.35; }
+.sub{ font-size:13pt; color:#374151; margin-top:3.5mm; line-height:1.7; }
+.head{ margin-bottom:8mm; }
+.body{ flex:1; display:flex; flex-direction:column; }
+.foot{ margin-top:auto; padding-top:6mm; }
+
+table{ width:100%; border-collapse:collapse; border:1px solid var(--bordr); }
+thead th{ background:var(--navy); color:#fff; font-size:12pt; font-weight:700;
+          text-align:left; padding:3mm 4mm; vertical-align:middle; }
+tbody td{ padding:3mm 4mm; font-size:12.5pt; line-height:1.6; vertical-align:middle;
+          border-top:1px solid var(--bordr); }
+tbody tr:nth-child(even) td{ background:var(--row); }
+tbody tr:first-child td{ border-top:0; }
+table.big tbody td{ font-size:14pt; padding:4mm 5mm; }
+table.big thead th{ font-size:13pt; padding:3.5mm 5mm; }
+td.k{ font-weight:700; color:var(--navy); white-space:nowrap; }
+td.tm{ font-weight:700; color:var(--gold); white-space:nowrap; }
+.muted{ color:var(--grey); }
+b,strong{ font-weight:700; color:var(--navy); }
+td b{ color:inherit; }
+
+ul{ list-style:none; }
+li{ position:relative; padding-left:5mm; margin-bottom:3mm; }
+li:last-child{ margin-bottom:0; }
+/* 記号を字として置くとフォントごとに縦位置が動く。円を描いて1行目の中心へ合わせる */
+li::before{ content:""; position:absolute; left:.4mm; top:calc(.5lh - .9mm);
+            width:1.8mm; height:1.8mm; border-radius:50%; background:var(--navy); }
+.text{ font-size:13.5pt; line-height:1.85; }
+
+.callout{ background:var(--light); border:1px solid var(--bordr); border-radius:1.5mm;
+          padding:3.5mm 5mm; font-size:12pt; line-height:1.7; }
+.callout .t{ font-weight:700; color:var(--navy); margin-bottom:1.2mm; }
+.cos{ display:flex; gap:5mm; }
+.cos > .callout{ flex:1; }
+.desc{ border-top:1px solid var(--bordr); padding-top:5mm; font-size:12.5pt; line-height:1.85; color:#374151; }
+.desc .t{ font-weight:700; color:var(--navy); margin-bottom:1.5mm; }
+
+.cover{ justify-content:center; }
+.cover .org{ font-size:12pt; color:var(--grey); }
+.cover h1{ font-size:36pt; line-height:1.3; margin-top:7mm; }
+.cover .lead{ font-size:18pt; color:var(--teal); margin-top:5mm; }
+.cover hr{ border:0; border-top:1px solid var(--bordr); width:80mm; margin:11mm 0; }
+.cover .ask{ font-size:14pt; line-height:1.9; }
+.cover .memo{ font-size:12pt; color:var(--grey); margin-top:3mm; line-height:1.7; }
+
+.flow{ display:flex; align-items:stretch; gap:0; }
+.flow .st{ flex:1; background:var(--light); border:1px solid var(--bordr); border-radius:1.5mm;
+           padding:7mm 6mm; min-height:48mm; display:flex; flex-direction:column; }
+.flow .st .n{ font-size:17pt; font-weight:700; color:var(--navy); line-height:1.4; }
+.flow .st .d{ font-size:13.5pt; line-height:1.7; margin-top:4mm; color:#374151; }
+.flow.compact .st{ min-height:0; padding:4.5mm 5mm; }
+.flow.compact .st .d{ margin-top:2mm; }
+.flow .st.em{ background:#fff; border:2px solid var(--navy); }
+.flow .arw{ width:10mm; display:flex; align-items:center; justify-content:center;
+            color:var(--gold); font-size:18pt; font-weight:700; }
+
+.split{ display:flex; gap:10mm; }
+.split > *{ flex:1; }
+.split > .text{ flex:1.15; }
+
+.msg .body{ justify-content:center; align-items:center; text-align:center; }
+.msg .line{ font-size:30pt; font-weight:700; color:var(--navy); line-height:1.55; }
+.msg .aside{ font-size:14pt; color:#374151; margin-top:9mm; line-height:1.9; }
+</style>
+</head><body>
+
+<!-- 1 表紙 -->
+<section class="page cover">
+  <div class="org">研修のご提案</div>
+  <h1>AI時代に必要とされる社員を、<br>会社で育てる</h1>
+  <div class="lead">教え合うコミュニティという方法</div>
+</section>
+
+<!-- 2 結論 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">ご提案</div>
+    <h1>客先の外に、AIで作って教え合う場を3か月つくる</h1>
+    <div class="sub">講師が教える研修ではなく、社員どうしが作ったものを見せ合い、教え合う場として立ち上げます。</div>
+  </div>
+  <div class="body" style="justify-content:center">
+    <table class="big">
+      <tbody>
+        <tr><td class="k" style="width:52mm">対象</td><td>客先に常駐している社員、最大20人。開発未経験から経験者まで</td></tr>
+        <tr><td class="k">期間と回数</td><td>3か月・全6回。オンラインで開催</td></tr>
+        <tr><td class="k">1回の形</td><td>90分。短い講義のあと、各自が手を動かし、少人数の班で見せ合う</td></tr>
+        <tr><td class="k">ゴール</td><td>自分で選んだ課題をAIで形にし、最終回で発表する</td></tr>
+        <tr><td class="k">会社にご用意いただくもの</td><td>開発環境とAIツール、その利用ルール</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="foot"><div class="desc">
+    <div class="t">未経験者が混ざっても進められるように</div>
+    第1回で全員の開発環境を整えてから始めます。手を動かす時間には補助役がつき、詰まった人と画面を共有して一緒に解きます。教材に客先の情報は持ち込まず、会社が用意した環境だけで進めます。
+  </div></div>
+  <div class="pno">2</div>
+</section>
+
+<!-- 3 現状 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">現状</div>
+    <h1>AIを使った開発は、特別なスキルではなくなりつつある</h1>
+    <div class="sub">コードを書く作業の多くをAIが担うようになり、エンジニアに求められることが変わってきています。</div>
+  </div>
+  <div class="body" style="justify-content:center">
+    <div class="flow">
+      <div class="st"><div class="n">人が書く</div><div class="d">仕様を読み、手でコードを書き、動かして確かめる</div></div>
+      <div class="arw">→</div>
+      <div class="st"><div class="n">AIが書き、人が確かめる</div><div class="d">AIに指示を出し、出てきたコードを読んで直す</div></div>
+      <div class="arw">→</div>
+      <div class="st em"><div class="n">人は何を作るかを決める</div><div class="d">課題を見つけ、作り方を選び、結果に責任を持つ</div></div>
+    </div>
+  </div>
+  <div class="foot"><div class="desc">
+    <div class="t">判断の土台は今も要る</div>
+    AIが出したコードの良し悪しを見極めるには、APIやデータベースといった土台の理解が欠かせません。ツールの操作を覚えるだけでは、この判断はできません。
+  </div></div>
+  <div class="pno">3</div>
+</section>
+
+<!-- 4 現状 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">現状</div>
+    <h1>客先常駐の社員がAI開発に触れられるかは、客先の方針で決まる</h1>
+    <div class="sub">同じ会社の社員でも、配属された客先がAIの利用を認めているかどうかで、経験の差が開いていきます。</div>
+  </div>
+  <div class="body" style="justify-content:center">
+    <table class="big">
+      <thead><tr><th style="width:52mm"></th><th>客先がAIの利用を認めている</th><th>客先がAIの利用を認めていない</th></tr></thead>
+      <tbody>
+        <tr><td class="k">日々の業務</td><td>AIを使った開発に自然に触れる</td><td>触れる機会がない</td></tr>
+        <tr><td class="k">学ぶ機会</td><td>業務の中で身につく</td><td>業務外に自分で時間を取るしかない</td></tr>
+        <tr><td class="k">会社から見えること</td><td colspan="2">どちらの場合も、社員が何をできるようになったかは会社から見えにくい</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="foot"><div class="desc">
+    <div class="t">個人の努力に任せると</div>
+    業務の外で時間を取れる人だけが学び、配属先による差はそのまま広がります。
+  </div></div>
+  <div class="pno">4</div>
+</section>
+
+<!-- 5 現状 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">現状</div>
+    <h1>分業の中で、下流の作業からAIに置き換わっていく</h1>
+    <div class="sub">上流を元請けが、実装を下請けや客先常駐の社員が担う分業では、実装側ほど「何を作るか」を考える機会が少なくなります。</div>
+  </div>
+  <div class="body" style="justify-content:center">
+        <table class="big">
+        <thead><tr><th style="width:34mm">工程</th><th>主に担う側</th><th>AIとの関係</th></tr></thead>
+        <tbody>
+          <tr><td class="k">要件定義・設計</td><td>元請け</td><td>AIで速くなる</td></tr>
+          <tr><td class="k">実装・テスト</td><td>下請け・客先常駐</td><td>AIに置き換わる</td></tr>
+        </tbody>
+      </table>
+  </div>
+  <div class="foot"><div class="desc">
+    <div class="t">個人の能力の差ではなく、立っている場所の差</div>
+    実装を担う現場では「こうした方がよい」という提案が通りにくく、考える経験を業務の中で積むのは簡単ではありません。AIが実装を肩代わりするほど、残るのはAIの出力を確かめる受け身の作業になります。自分で課題を決めて作る場は、業務の外に会社が用意する必要があります。
+  </div></div>
+  <div class="pno">5</div>
+</section>
+
+<!-- 6 理想 -->
+<section class="page msg">
+  <div class="sec">目指す姿</div>
+  <div class="body">
+    <div class="line">自分で課題を決め、AIで形にし、<br>人に説明できる社員へ</div>
+    <div class="aside">使えるツールが増えることより、何を作るかを自分で決められることが、<br>どの客先でも評価される力になります。</div>
+  </div>
+  <div class="foot"><div class="desc">
+    <div class="t">3か月の中で、この3つを順に経験する</div>
+    第2〜3回でAIと形にする経験を積み、第4回から自分で課題を決めて作り、第5〜6回で人に説明します。
+  </div></div>
+  <div class="pno">6</div>
+</section>
+
+<!-- 7 内容 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">内容</div>
+    <h1>3か月で、作って発表するまでを通す</h1>
+    <div class="sub">前半で作り方を身につけ、後半は自分の課題に取り組みます。最終回は全員が発表します。</div>
+  </div>
+  <div class="body" style="justify-content:center">
+    <table class="big">
+      <thead><tr><th style="width:18mm">回</th><th style="width:70mm">テーマ</th><th>受講者がすること</th></tr></thead>
+      <tbody>
+        <tr><td class="tm">1</td><td class="k">キックオフ</td><td>開発環境を整え、班を組む。自己紹介で最近学んだことを話す</td></tr>
+        <tr><td class="tm">2</td><td class="k">AIと作る基本</td><td>小さなWebアプリをAIと作り、中身を説明できるようにする</td></tr>
+        <tr><td class="tm">3</td><td class="k">題材ハンズオン</td><td>APIやデータベースなど、作るときの土台を1つ触る</td></tr>
+        <tr><td class="tm">4</td><td class="k">自分の課題で作り始める</td><td>身近な困りごとを題材に選び、作り始める</td></tr>
+        <tr><td class="tm">5</td><td class="k">中間共有</td><td>班をまたいで途中経過を見せ合い、助言をもらう</td></tr>
+        <tr><td class="tm">6</td><td class="k">発表会</td><td>作ったものと、詰まったところ、次にやりたいことを発表する</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pno">7</div>
+</section>
+
+<!-- 8 内容 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">内容</div>
+    <h1>1回90分のうち、半分以上は受講者が手を動かし、話す</h1>
+    <div class="sub">例として、第3回「APIサーバをAIと作る」の時間割です。</div>
+  </div>
+  <div class="body" style="justify-content:center">
+    <table class="big">
+      <thead><tr><th style="width:30mm">時間</th><th style="width:44mm">進め方</th><th>中身</th></tr></thead>
+      <tbody>
+        <tr><td class="tm">15分</td><td class="k">班でチェックイン</td><td>最近学んだこと、困っていることを4〜5人の班で話す</td></tr>
+        <tr><td class="tm">15分</td><td class="k">短い講義</td><td>APIとは何か、AIが作ったものの何を確かめればよいか</td></tr>
+        <tr><td class="tm">40分</td><td class="k">各自で作る</td><td>AIにAPIサーバを作らせて動かし、中身を説明できるようにする</td></tr>
+        <tr><td class="tm">15分</td><td class="k">班で見せ合う</td><td>できたこと、詰まったところを見せ合う</td></tr>
+        <tr><td class="tm">5分</td><td class="k">全体で振り返る</td><td>次の回でやりたいことを受講者から聞く</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pno">8</div>
+</section>
+
+<!-- 9 内容 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">内容</div>
+    <h1>教わる側が、次の回をつくる側に回る</h1>
+    <div class="sub">人に教えるには、作ったものを一段上から説明し直す必要があり、それが「何を作るかを決める力」の練習になります。</div>
+  </div>
+  <div class="body" style="justify-content:center">
+    <div class="flow">
+      <div class="st"><div class="n">作る</div><div class="d">AIと一緒に、自分の手で形にする</div></div>
+      <div class="arw">→</div>
+      <div class="st"><div class="n">見せる</div><div class="d">班で見せ合い、発表する</div></div>
+      <div class="arw">→</div>
+      <div class="st"><div class="n">次をつくる</div><div class="d">次にやりたいことと題材を出す</div></div>
+      <div class="arw">→</div>
+      <div class="st em"><div class="n">教える</div><div class="d">班の進行役や、次の期の補助役・講師役を担う</div></div>
+    </div>
+  </div>
+  <div class="foot"><div class="desc">
+    <div class="t">開催のない週も</div>
+    回をまたいで学んだことを書き込むチャンネルを置き、場がつながり続けるようにします。
+  </div></div>
+  <div class="pno">9</div>
+</section>
+
+<!-- 10 効果 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">効果</div>
+    <h1>社員には成長の場と所属する理由が、会社には人材の厚みが残る</h1>
+  </div>
+  <div class="body" style="justify-content:center">
+    <table class="big">
+      <thead><tr><th style="width:40mm"></th><th>社員に残るもの</th><th>会社に残るもの</th></tr></thead>
+      <tbody>
+        <tr><td class="k">スキル</td><td>AIで作った成果物と、それを説明できる経験</td><td>AIを使う案件や、上流寄りの仕事に手を挙げられる社員が増える</td></tr>
+        <tr><td class="k">つながり</td><td>客先にいても、学び合う仲間と場がある</td><td>社員がこの会社にいる理由が一つ増える</td></tr>
+        <tr><td class="k">見える化</td><td>発表を通じて、自分の成長を確かめられる</td><td>社員ごとのレベルと志向が見え、アサインや育成の判断に使える</td></tr>
+        <tr><td class="k">発信</td><td>人前で話し、教える経験</td><td>学び合う文化があることを、採用の場で伝えられる</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pno">10</div>
+</section>
+
+<!-- 11 進め方 -->
+<section class="page">
+  <div class="head">
+    <div class="sec">進め方</div>
+    <h1>まず20人で試し、効果を見て広げる</h1>
+    <div class="sub">費用と負担を抑えた規模で始め、広げるかどうかは結果を見てから決められます。</div>
+  </div>
+  <div class="body">
+    <div class="flow compact" style="margin-bottom:7mm">
+      <div class="st"><div class="n">試行</div><div class="d">20人・3か月・全6回</div></div>
+      <div class="arw">→</div>
+      <div class="st"><div class="n">振り返り</div><div class="d">成果物と受講者の声をまとめて報告する</div></div>
+      <div class="arw">→</div>
+      <div class="st"><div class="n">広げる</div><div class="d">対象の人数や部署を広げる</div></div>
+    </div>
+    <table class="big">
+      <thead><tr><th style="width:62mm">ご相談したいこと</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td class="k">対象と人数</td><td class="muted">要相談</td></tr>
+        <tr><td class="k">開催の時間帯</td><td class="muted">要相談（業務時間内とするかを含む）</td></tr>
+        <tr><td class="k">開発環境とAIツール</td><td class="muted">要相談（利用ルールを含む）</td></tr>
+        <tr><td class="k">費用</td><td class="muted">要相談</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pno">11</div>
+</section>
+
+</body></html>
